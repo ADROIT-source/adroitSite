@@ -6,7 +6,7 @@ import HeroSection from '../components/main/HeroSection'
 import HistorySection from '../components/main/HistorySection'
 import ProductsSection from '../components/main/ProductsSection'
 import TestimonialsSection from '../components/main/TestimonialsSection'
-
+import Company from '../components/main/Company'
 // 바 메뉴
 
 import Bar from '../components/bar/bar'
@@ -21,6 +21,7 @@ const Main: React.FC = () => {
     <div className="Main">
         <Bar />
         <HeroSection />
+        <Company />
         <AboutSection />
         <ProductsSection />
         <TestimonialsSection />

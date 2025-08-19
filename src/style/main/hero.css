@@ -7,30 +7,19 @@
     /* border: 1px solid black; */
     flex: 1;
 }
-.title_tag{
-    width: fit-content;
-    border-radius: 17px;
-    height: 40px;
-    padding: 0px 15px;
-    margin: 20px 0px;
-    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-.title_tag span{
-    margin: 0px 15px;
-    color: 
-    #00bbff;
-}
 .HeroSection_text h1{
     font-size: 62px;
+    color: white;
 }
 .HeroSection_text h1:nth-of-type(2) {
-    color: #00bbff;
+    color: #1e5ef3;
     margin: 0px 0px 10px 0px;
 }
 .HeroSection_text p{
     width: fit-content;
     font-size: 18px;
     margin: 5px 0px;
+    color: white;
 }
 .HeroSection_button{
     display: flex;
@@ -43,29 +32,44 @@
     outline: none;
 }
 .product_button{
-    background-color: #00bbff;
-    border: 1px solid #0097ce;
+    background-color: rgba(30, 94, 243, 0.1);
+    border: 1px solid #1e5ef3;
     transition: background 0.3s ease-in-out;
 }
 .product_button:hover{
-    background-color: #0097ce;
+    background-color: #1e5ef3;
 }
 .product_button span{
     color: white;
     font-size: 14px;
     margin: 0px 10px;
+    transition: background 0.3s ease-in-out;
 }
 .video_button{
     margin: 0px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid white;
+    background-color: #181818;
     transition: background 0.3s ease-in-out;
 }
-.video_button:hover{
-    background-color: white;
+.play_icon{
+    color: white;
+    transition: background 0.3s ease-in-out;
 }
+
 .video_button span{
     margin: 0px 10px;
     font-size: 14px;
+    color: white;
+}
+.video_button:hover {
+    background-color: white;
+}
+
+.video_button:hover span {
+    color: black;
+}
+.video_button:hover .play_icon{
+    color: black;
 }
 
 .HeroSection_card{
@@ -92,12 +96,12 @@
     border-radius: 7px;
     width: 50px;
     height: 50px;
-    background-color: rgba(0, 204, 255, 0.1);
+    background-color: rgba(0, 102, 255, 0.2);
 }
 
 .HeroSection_card li span{
     font-size: 12px;
-    color: gray;
+    color: white;
 }
 .HeroSection_tag{
     display: flex;
@@ -109,6 +113,7 @@
 }
 .HeroSection_tag li span{
     font-size: 13px;
+    color: white;
 }
 .HeroSection_tag li:nth-child(2){
     margin: 0px 25px;
@@ -118,7 +123,7 @@
     height: 7px;
     border-radius: 50%;
     margin-right: 7px;
-    background-color: #0097ce;
+    background-color: #1e5ef3;
 }
 .HeroSection_image_wrap{
     height: 100%;
@@ -182,34 +187,37 @@
     transform: scale(1.02); /* 5% 확대 */
 }
 
-.dotted1, .dotted2, .dotted3{
+.Hero_dotted1, .Hero_dotted2, .Hero_dotted3{
     position: absolute;
     border-radius: 50%;
 }
-.dotted1 {
+.Hero_dotted1 {
   width: 150px;
   height: 150px;
-  background-color: rgba(0, 151, 206, 0.3);
+  background-color: rgba(0, 48, 204, 0.3);
   bottom: 60px;
   left: 60px;
   animation: pulse 7s ease-in-out infinite;
   border-radius: 50%;
 }
-.dotted2{
-    width: 60px;
-    height: 60px;
-    background-color: rgba(0, 151, 206, 0.7);
-    top: 80px;
-    right: 150px;
-    animation: pulse 7s ease-in-out infinite;
+
+.Hero_dotted2 {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 81, 255, 0.7);
+  top: 60px;
+  right: 150px;
+  animation: pulse 7s ease-in-out infinite;
 }
-.dotted3{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(0, 151, 206);
-    right: 60px;
-    animation: pulse 7s ease-in-out infinite;
+
+.Hero_dotted3 {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(0, 28, 184);
+  right: 60px;
+  animation: pulse 7s ease-in-out infinite;
 }
+
 
 @keyframes pulse {
   0% {

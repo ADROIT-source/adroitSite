@@ -14,43 +14,43 @@ const HeroSection: React.FC = () => {
     <div id="hero" className="HeroSection">
       <div className="HeroSection_text">
         <div className="title_tag flex-center">
-          <Sparkles size={18} color="#00bbff" strokeWidth={2} />
+          <Sparkles size={18} color="white" strokeWidth={2} />
           <span>혁신적인 로봇 기술 선도 기업</span>
         </div>
         <FadeInSection direction="up" duration={800}>
           <h1>미래를 만드는</h1>
           <h1>로봇 기술</h1>
+          <p>첨단 로봇팔과 자동화 솔루션으로 제조업의 혁신을 이끌어갑니다.</p>
+          <p>정밀하고 효율적인 로봇 기술로 생산성을 극대화하세요.</p>
         </FadeInSection>
-        <p>첨단 로봇팔과 자동화 솔루션으로 제조업의 혁신을 이끌어갑니다.</p>
-        <p>정밀하고 효율적인 로봇 기술로 생산성을 극대화하세요.</p>
         <div className="HeroSection_button">
           <button className="product_button flex-center">
             <span>제품 둘러보기</span>
             <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
           </button>
           <button className="video_button flex-center">
-            <Play size={16} />
+            <Play size={16} className="play_icon" />
             <span>영상 보기</span>
           </button>
         </div>
         <ul className="HeroSection_card">
           <li>
             <div className="HeroSection_card_icon flex-center">
-                <Zap size={24} color="#0097ce" strokeWidth={2} />
+                <Zap size={24} color="#1e5ef3" strokeWidth={2} />
             </div>
             <AnimatedCounter target={500} suffix="+" fontSize="24px"/>
             <span>설치된 로봇</span>
           </li>
           <li> 
             <div className="HeroSection_card_icon flex-center">
-                <Shield size={24} color="#0097ce" strokeWidth={2} />
+                <Shield size={24} color="#1e5ef3" strokeWidth={2} />
             </div>
             <AnimatedCounter target={80} suffix="%" fontSize="24px"/>
             <span>가동률</span>
           </li>
           <li>
             <div className="HeroSection_card_icon flex-center">
-                <Cpu size={24} color="#0097ce" strokeWidth={2} />
+                <Cpu size={24} color="#1e5ef3" strokeWidth={2} />
             </div>
             <AnimatedCounter target={7} suffix="/24" fontSize="24px"/>
             <span>지원 서비스</span>
@@ -72,7 +72,7 @@ const HeroSection: React.FC = () => {
         </ul>
       </div>
       <div className="HeroSection_image_wrap flex-center">
-          <div className="dotted1"></div>
+          <div className="Hero_dotted1"></div>
           <div className="HeroSection_image1">
             <img src={HeroSectionImage1} alt="" />
           </div>
@@ -82,8 +82,8 @@ const HeroSection: React.FC = () => {
           <div className="HeroSection_image3">
             <img src={HeroSectionImage3} alt="" />
           </div>
-          <div className="dotted2"></div>
-          <div className="dotted3"></div>
+          <div className="Hero_dotted2"></div>
+          <div className="Hero_dotted3"></div>
       </div>
     </div>
   );
