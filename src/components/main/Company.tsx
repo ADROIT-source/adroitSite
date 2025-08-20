@@ -43,7 +43,7 @@ const Company: React.FC = () => {
     <span className="flex-center">신뢰받는 파트너</span>
     <h1 className="flex-center">대한민국 대표 기업들과 함께합니다.</h1>
     </FadeInSection>
-    <ul className="company_card">
+    <FadeInSection direction="up" duration={800} className="company_card">
         <div className="company_card_inner">
             {companyLogos.map((logo, idx) => (
             <li key={idx}>
@@ -56,7 +56,7 @@ const Company: React.FC = () => {
             </li>
             ))}
         </div>
-    </ul>
+    </FadeInSection>
     </div>
   );
 };

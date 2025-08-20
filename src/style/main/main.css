@@ -16,9 +16,12 @@
 }
 
 .ProductsSection{
-    height: 240svh;
+    height: 250svh;
 }
 
+.HistorySection{
+    height: 300vh;
+}
 
 .title_tag{
     width: fit-content;

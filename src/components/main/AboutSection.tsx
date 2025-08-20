@@ -13,11 +13,11 @@ const AboutSection: React.FC = () => {
   return (
     <div id="about" className="AboutSection">
       <div className="AboutSection_text">
+      <FadeInSection direction="up" duration={800}>
         <div className="title_tag flex-center">
           <Shell size={18} color="white" strokeWidth={2}/>
           <span>회사소개</span>
         </div>
-        <FadeInSection direction="up" duration={800}>
           <h1>혁신적인 로봇 기술로</h1>
           <h1>미래를 선도합니다</h1>
           <p>20년간의 로봇 기술 개발 경험을 바탕으로</p>

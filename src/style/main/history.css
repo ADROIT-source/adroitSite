@@ -1,0 +1,132 @@
+.HistorySection {
+  padding: 100px 180px 20px 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HistorySection h1 {
+  color: #1e5ef3;
+  font-size: 42px;
+  margin: 10px 0px;
+}
+
+.HistorySection p {
+  color: white;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.history {
+  width: 100%;
+  position: relative;
+  margin: 90px 0px 50px 0px;
+}
+
+.history_line {
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgb(180, 180, 180) 0%,
+    rgb(80, 80, 200) 50%,
+    rgb(20, 20, 80) 100%
+  );
+}
+
+.history_card_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 150px;
+  position: relative;
+}
+
+.history_card_wrap.left {
+  justify-content: flex-start;
+}
+
+.history_card_wrap.right {
+  justify-content: flex-end;
+}
+
+.history_card {
+  width: 480px;
+  min-height: 150px;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px 45px;
+  border: 1px solid rgb(100, 100, 100);
+  background: transparent;
+}
+
+.history_card h3 {
+  font-size: 24px;
+  color: #1e5ef3;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.history_card ul {
+  list-style-type: disc;
+  margin: 20px 0px 10px 0px;
+}
+
+.project_item {
+  font-size: 14px;
+  color: white;
+  margin: 10px 0;
+}
+
+.HistorySection_footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    margin: 50px 0px;
+}
+.HistorySection_footer li h1{
+    font-size: 42px;
+}
+.HistorySection_footer li:nth-child(1) h1 {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.HistorySection_footer li:nth-child(2) h1 {
+    background: linear-gradient(45deg, #6f42c1, #9b59b6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.HistorySection_footer li:nth-child(3) h1 {
+    background: linear-gradient(45deg, #fd7e14, #e63946);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.HistorySection_footer span{
+    color: white;
+}
+.HistorySection_footer li{
+    flex: 1;
+    border: 1px solid rgb(100, 100, 100);
+    height: 100%;
+    border-radius: 21px;
+    padding: 10px 0px 20px 0px;
+}
+
+.HistorySection_footer li:nth-child(2){
+    margin: 0px 30px;
+
+}

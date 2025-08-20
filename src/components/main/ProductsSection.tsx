@@ -118,14 +118,14 @@ const ProductsSection: React.FC = () => {
                 <span>자세히 보기</span>
                 <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
               </button>
-            </div>
+            </div>  
           </div>
       </div>
+        <button className="more_product flex-center">
+          <span>더 많은 제품 보기</span>
+          <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
+        </button>
       </FadeInSection>
-      <button className="more_product flex-center">
-        <span>더 많은 제품 보기</span>
-        <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
-      </button>
     </div>
   );
 };

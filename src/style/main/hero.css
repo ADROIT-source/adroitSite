@@ -160,8 +160,8 @@
     background-color: white;
     border-radius:17px;
     position: absolute;
-    top: 80px;
-    left: 80px;
+    top: 60px;
+    left: 40px;
     overflow: hidden;
     transition: transform 0.3s ease; 
     z-index: 3;
@@ -175,7 +175,7 @@
     border-radius: 17px;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    right: 10px;
     overflow: hidden;
     transition: transform 0.3s ease; 
     z-index: 3;

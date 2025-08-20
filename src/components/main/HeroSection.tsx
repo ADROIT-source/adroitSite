@@ -13,16 +13,15 @@ const HeroSection: React.FC = () => {
   return (
     <div id="hero" className="HeroSection">
       <div className="HeroSection_text">
+        <FadeInSection direction="up" duration={800}>
         <div className="title_tag flex-center">
           <Sparkles size={18} color="white" strokeWidth={2} />
           <span>혁신적인 로봇 기술 선도 기업</span>
         </div>
-        <FadeInSection direction="up" duration={800}>
           <h1>미래를 만드는</h1>
           <h1>로봇 기술</h1>
           <p>첨단 로봇팔과 자동화 솔루션으로 제조업의 혁신을 이끌어갑니다.</p>
           <p>정밀하고 효율적인 로봇 기술로 생산성을 극대화하세요.</p>
-        </FadeInSection>
         <div className="HeroSection_button">
           <button className="product_button flex-center">
             <span>제품 둘러보기</span>
@@ -33,6 +32,7 @@ const HeroSection: React.FC = () => {
             <span>영상 보기</span>
           </button>
         </div>
+
         <ul className="HeroSection_card">
           <li>
             <div className="HeroSection_card_icon flex-center">
@@ -70,6 +70,7 @@ const HeroSection: React.FC = () => {
             <span>전국 A/S 네트워크</span>
           </li>
         </ul>
+        </FadeInSection>
       </div>
       <div className="HeroSection_image_wrap flex-center">
           <div className="Hero_dotted1"></div>
