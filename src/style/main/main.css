@@ -1,39 +1,47 @@
 .HeroSection,
 .AboutSection,
-.ProductsSection, 
+.ProductsSection,
 .TestimonialsSection,
 .HistorySection,
+.ContactSection,
+.QuestionSection {
+  width: 100%;
+  height: 100svh;
+  background-color: #181818;
+  /* border: 1px solid black; */
+}
+
+.Company {
+  width: 100%;
+  height: 50svh;
+}
+
+.ProductsSection {
+  height: 250svh;
+}
+
+.HistorySection {
+  height: 300vh;
+}
+.QuestionSection {
+  height: 170vh;
+  /* height: fit-content; */
+}
 .ContactSection{
-    width: 100%;
-    height: 100svh;
-    background-color: #181818;
-    /* border: 1px solid black; */
+    height: 150vh;
 }
 
-.Company{
-    width: 100%;
-    height: 50svh;
+.title_tag {
+  width: fit-content;
+  border-radius: 17px;
+  height: 40px;
+  padding: 0px 15px;
+  margin: 20px 0px;
+  background-color: rgb(50, 50, 50);
+  box-shadow: inset 0 2px 6px #181818;
 }
-
-.ProductsSection{
-    height: 250svh;
-}
-
-.HistorySection{
-    height: 300vh;
-}
-
-.title_tag{
-    width: fit-content;
-    border-radius: 17px;
-    height: 40px;
-    padding: 0px 15px;
-    margin: 20px 0px;
-    background-color: rgb(50, 50, 50);
-    box-shadow: inset 0 2px 6px #181818;
-}
-.title_tag span{
-    margin: 0px 15px;
-    color:white;
-    font-size: 12px;
+.title_tag span {
+  margin: 0px 15px;
+  color: white;
+  font-size: 12px;
 }

@@ -6,7 +6,7 @@ type AnimatedCounterProps = {
   duration?: number;
   suffix?: string;
   fontSize?: string | number; // 추가: 폰트 크기
-  margin?: string;            // 추가: margin
+  margin?: string; // 추가: margin
 };
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -14,7 +14,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   duration = 2000,
   suffix = "",
   fontSize = "2rem", // 기본값
-  margin = "10px 0",      // 기본값
+  margin = "10px 0", // 기본값
 }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);

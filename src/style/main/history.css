@@ -84,49 +84,48 @@
   margin: 10px 0;
 }
 
-.HistorySection_footer{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
-    height: 150px;
-    margin: 50px 0px;
+.HistorySection_footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 150px;
+  margin: 50px 0px;
 }
-.HistorySection_footer li h1{
-    font-size: 42px;
+.HistorySection_footer li h1 {
+  font-size: 42px;
 }
 .HistorySection_footer li:nth-child(1) h1 {
-    background: linear-gradient(45deg, #007bff, #0056b3);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .HistorySection_footer li:nth-child(2) h1 {
-    background: linear-gradient(45deg, #6f42c1, #9b59b6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(45deg, #6f42c1, #9b59b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .HistorySection_footer li:nth-child(3) h1 {
-    background: linear-gradient(45deg, #fd7e14, #e63946);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  background: linear-gradient(45deg, #fd7e14, #e63946);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.HistorySection_footer span{
-    color: white;
+.HistorySection_footer span {
+  color: white;
 }
-.HistorySection_footer li{
-    flex: 1;
-    border: 1px solid rgb(100, 100, 100);
-    height: 100%;
-    border-radius: 21px;
-    padding: 10px 0px 20px 0px;
+.HistorySection_footer li {
+  flex: 1;
+  border: 1px solid rgb(100, 100, 100);
+  height: 100%;
+  border-radius: 21px;
+  padding: 10px 0px 20px 0px;
 }
 
-.HistorySection_footer li:nth-child(2){
-    margin: 0px 30px;
-
+.HistorySection_footer li:nth-child(2) {
+  margin: 0px 30px;
 }

@@ -1,0 +1,103 @@
+.QuestionSection {
+  padding: 100px 180px 20px 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.QuestionSection h1 {
+  color: white;
+  font-size: 42px;
+  margin: 10px 0px;
+}
+
+.question_desc{
+  color: white;
+  font-size: 18px;
+  margin: 10px 0px;
+}
+
+.question_card_wrap {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.question_card {
+  width: 70%;
+  height: fit-content;
+  border: 1px solid rgb(100, 100, 100);
+  border-radius: 11px;
+  margin: 20px 0px;
+  overflow: hidden;
+  background-color: rgb(30, 30, 30);
+  padding: 20px 0px;
+  transition: all 0.3s ease;
+}
+
+.question_card_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0px 25px;
+}
+
+.question_card_title p {
+  font-size: 18px;
+  color: white;
+  margin: 0;
+}
+
+.question_response {
+  width: 100%;
+  padding: 0 25px;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.question_response.expanded {
+  max-height: 200px; /* Adjust based on content size */
+  padding: 25px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.question_response.collapsed {
+  max-height: 0;
+  padding: 0 25px;
+  transition: max-height 0.2s ease, padding 0.2s ease;
+}
+
+.question_response span {
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.question_response.expanded span {
+  opacity: 1;
+}
+
+
+.more_question{
+    margin-top: 50px;
+    font-size: 21px;
+    color: white;
+
+}
+.more_question_button {
+    margin: 20px 0px 0px 0px;
+}
+
+.more_question_button span{
+    color: #3673ff;
+    transition: background 0.3s ease;
+    margin: 0px 10px;
+}
+
+.more_question_button_arrow{
+    transition: background 0.3s ease;
+}
+.more_question_button:hover span,.more_question_button:hover .more_question_button_arrow{
+    color: #004cff;
+    stroke: #004cff;
+}

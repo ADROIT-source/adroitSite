@@ -39,24 +39,24 @@ const companyLogos = [
 const Company: React.FC = () => {
   return (
     <div className="Company">
-    <FadeInSection direction="up" duration={800}>
-    <span className="flex-center">신뢰받는 파트너</span>
-    <h1 className="flex-center">대한민국 대표 기업들과 함께합니다.</h1>
-    </FadeInSection>
-    <FadeInSection direction="up" duration={800} className="company_card">
+      <FadeInSection direction="up" duration={800}>
+        <span className="flex-center">신뢰받는 파트너</span>
+        <h1 className="flex-center">대한민국 대표 기업들과 함께합니다.</h1>
+      </FadeInSection>
+      <FadeInSection direction="up" duration={800} className="company_card">
         <div className="company_card_inner">
-            {companyLogos.map((logo, idx) => (
+          {companyLogos.map((logo, idx) => (
             <li key={idx}>
-                <img src={logo} alt="회사 로고" />
+              <img src={logo} alt="회사 로고" />
             </li>
-            ))}
-            {companyLogos.map((logo, idx) => (
+          ))}
+          {companyLogos.map((logo, idx) => (
             <li key={`clone-${idx}`}>
-                <img src={logo} alt="회사 로고" />
+              <img src={logo} alt="회사 로고" />
             </li>
-            ))}
+          ))}
         </div>
-    </FadeInSection>
+      </FadeInSection>
     </div>
   );
 };
