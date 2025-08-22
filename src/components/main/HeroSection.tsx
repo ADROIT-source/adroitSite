@@ -2,8 +2,8 @@ import React from "react";
 import "../../style/main/hero.css";
 
 import { ArrowRight, Play, Zap, Shield, Cpu, Sparkles } from "lucide-react";
-import AnimatedCounter from "../AnimatedCounter";
-import FadeInSection from "../ScrollFadeInSection";
+import AnimatedCounter from "../../animations/AnimatedCounter";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
 import HeroSectionImage1 from "../../assets/images/HeroSection_image1.jpg";
 import HeroSectionImage2 from "../../assets/images/HeroSection_image2.jpg";

@@ -1,8 +1,8 @@
 import React from "react";
 import "../../style/main/history.css";
 import { CalendarDays } from "lucide-react";
-import FadeInSection from "../ScrollFadeInSection";
-import AnimatedCounter from "../AnimatedCounter";
+import FadeInSection from "../../animations/ScrollFadeInSection";
+import AnimatedCounter from "../../animations/AnimatedCounter";
 
 interface HistoryItem {
   title: string;

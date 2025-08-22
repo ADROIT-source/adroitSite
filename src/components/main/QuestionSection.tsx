@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../../style/main/question.css";
 import { Info, ChevronUp, ChevronDown } from "lucide-react";
 
-import FadeInSection from "../ScrollFadeInSection";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
-import { MoveRight } from 'lucide-react';
+import { MoveRight } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -68,7 +68,9 @@ const QuestionSection: React.FC = () => {
           <span>자주하는 묻는 질문</span>
         </div>
         <h1>궁금한 점이 있으신가요?</h1>
-        <p className="question_desc">로봇팔 도입에 관한 자주 묻는 질문들을 확인해보세요.</p>
+        <p className="question_desc">
+          로봇팔 도입에 관한 자주 묻는 질문들을 확인해보세요.
+        </p>
       </FadeInSection>
       <ul className="question_card_wrap flex-direction-center">
         {faqs.map((faq, index) => (
@@ -101,11 +103,17 @@ const QuestionSection: React.FC = () => {
         ))}
       </ul>
       <FadeInSection direction="up" duration={800}>
-      <p className="more_question">더 궁금한 점이 있으시다면 언제든지 문의해주세요.</p>
-      <li className="more_question_button flex-center">
-        <span >문의하기</span>
-         <MoveRight color="#1e5ef3" className="more_question_button_arrow" size={16} />
-      </li>
+        <p className="more_question">
+          더 궁금한 점이 있으시다면 언제든지 문의해주세요.
+        </p>
+        <li className="more_question_button flex-center">
+          <span>문의하기</span>
+          <MoveRight
+            color="#1e5ef3"
+            className="more_question_button_arrow"
+            size={16}
+          />
+        </li>
       </FadeInSection>
     </div>
   );

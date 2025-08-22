@@ -6,7 +6,7 @@ import { Shell, Shield, Target, Zap, Users } from "lucide-react";
 import AboutSectionImage1 from "../../assets/images/AboutSection_image1.jpg";
 import AboutSectionImage2 from "../../assets/images/AboutSection_image2.jpg";
 
-import FadeInSection from "../ScrollFadeInSection";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
 const AboutSection: React.FC = () => {
   return (
@@ -34,7 +34,7 @@ const AboutSection: React.FC = () => {
               </div>
               <p>안정성</p>
               <span>
-                99.9% 가동률과 최고 수준의 안전 기준을 충족하는 로봇 시스템
+                99.9% 가동률과 최고 수준의<br /> 안전 기준을 충족하는 로봇 시스템
               </span>
             </li>
             <li>
@@ -42,21 +42,21 @@ const AboutSection: React.FC = () => {
                 <Target size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
               <p>정밀성</p>
-              <span>마이크로미터 단위의 정밀도로 완벽한 품질 보장</span>
+              <span>마이크로미터 단위의 정밀도로<br /> 완벽한 품질 보장</span>
             </li>
             <li>
               <div className="AboutSection_card_icon flex-center">
                 <Zap size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
               <p>효율성</p>
-              <span>기존 대비 300% 향상된 생산성과 에너지 효율</span>
+              <span>기존 대비 300% 향상된<br /> 생산성과 에너지 효율</span>
             </li>
             <li>
               <div className="AboutSection_card_icon flex-center">
                 <Users size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
               <p>지원</p>
-              <span>24시간 기술 지원과 맞춤형 솔루션 제공</span>
+              <span>24시간 기술 지원과 맞춤형<br /> 솔루션 제공</span>
             </li>
           </ul>
         </FadeInSection>

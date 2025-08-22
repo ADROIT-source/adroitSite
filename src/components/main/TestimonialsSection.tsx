@@ -3,7 +3,7 @@ import "../../style/main/testimonials.css";
 
 import { Quote, Star } from "lucide-react";
 
-import FadeInSection from "../ScrollFadeInSection";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
 import TestUserIcon1 from "../../assets/images/test_user_icon1.jpg";
 import TestUserIcon2 from "../../assets/images/test_user_icon2.jpg";

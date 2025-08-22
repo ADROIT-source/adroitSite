@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/main/company.css";
 
-import FadeInSection from "../ScrollFadeInSection";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
 // 로고 이미지 모음
 import HyndalRotemLogo from "../../assets/logo/hyundai_rotem.png";

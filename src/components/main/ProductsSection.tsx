@@ -7,7 +7,7 @@ import ProductsImage3 from "../../assets/images/product_image3.jpg";
 
 import { Box, CircleCheckBig, ArrowRight } from "lucide-react";
 
-import FadeInSection from "../ScrollFadeInSection";
+import FadeInSection from "../../animations/ScrollFadeInSection";
 
 const ProductsSection: React.FC = () => {
   return (

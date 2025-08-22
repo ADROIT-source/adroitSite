@@ -1,0 +1,122 @@
+.FooterSection {
+  padding: 50px 160px 20px 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer_info{
+    height: 350px;
+    /* border: 1px solid white; */
+    width: 100%;
+}
+
+.footer_logo{
+    width: 240px;
+    height: 90px;
+    padding: 15px 30px;
+}
+.footer_logo img{
+    width: 100%;
+    height: 100%;
+}
+.footer_menu{
+    display: flex;
+}
+
+.footer_menu ul{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.footer_menu ul:not(:first-child) p{
+    width: 240px;
+    height: 90px;
+    font-size: 16px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.footer_menu ul:not(:first-child) li{
+    width: 100%;
+    margin: 5px 0px;
+}
+.footer_menu ul:not(:first-child) li a{
+    font-size: 14px;
+    color: white;
+    transition: color 0.3s ease;
+}
+.footer_menu ul:not(:first-child) li a:hover{
+    color: #1e5ef3;
+}
+
+
+.footer_contact p{
+    font-size: 14px;
+    color: white;
+    margin: 5px 0px;
+    padding: 0px 20px;
+    line-height: 30px;
+}
+.footer_contact li{
+    width: 100%;
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
+    margin: 5px 0px;
+}
+.footer_contact li span{
+    color: white;
+    font-size: 14px;
+    margin: 0px 10px;
+}
+
+.footer_copyright{
+    height: calc(100% - 350px);
+    width: 100%;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border-top: 1px solid rgb(40, 40, 40);
+}
+
+.footer_copyright > p{
+    color: rgb(145, 145, 145);
+    font-size: 14px;
+}
+.footer_sns_icon{
+    display: flex;
+}
+
+.footer_sns_icon li{
+    width: 50px;
+    height: 50px;
+    border-radius:11px;
+    background-color: rgba(0, 102, 255, 0.2);
+    margin: 0px 10px;
+    transition: background 0.3s ease;
+}
+.footer_sns_icon li:hover{
+    background-color: rgba(0, 102, 255, 0.4);
+    
+}
+.legal_links{
+    display: flex;
+}
+.legal_links li a{
+    color: rgb(145, 145, 145);
+    font-size: 13px;
+    transition: color 0.3s ease;
+}
+.legal_links li a:hover{
+    color: #1e5ef3;
+}
+
+.legal_links li:nth-child(2){
+    margin: 0px 15px;
+}

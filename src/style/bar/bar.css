@@ -31,7 +31,7 @@
 .bar_menu {
   height: 100%;
 }
-.bar_menu li {
+.bar_menu li , .bar_menu a{
   width: fit-content;
   list-style: none;
   margin: 0px 30px;
@@ -45,7 +45,8 @@
   height: 40px;
   color: white;
 }
-.bar_menu li::after {
+
+.bar_menu li::after, .bar_menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -57,7 +58,7 @@
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-.bar_menu li:hover::after {
+.bar_menu li:hover::after, .bar_menu a:hover::after {
   transform: scaleX(1);
 }
 .contact_us {

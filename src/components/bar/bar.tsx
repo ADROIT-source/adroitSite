@@ -38,6 +38,7 @@ const Bar: React.FC = () => {
             <li onClick={() => scrollToSection('product')}>Product</li>
             <li onClick={() => scrollToSection('history')}>History</li>
             <li onClick={() => scrollToSection('contact')}>Contact</li>
+            <a href="#">인공지능 챔피언스</a>
         </ul>
         <div className="contact_us flex-center">
             <button className="contact_us_button flex-center" onClick={() => scrollToSection('contact')}>
