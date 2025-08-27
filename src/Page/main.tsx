@@ -17,6 +17,7 @@ import Bar from "../components/bar/bar";
 
 import "../style/main/main.css";
 import "../App.css";
+import "../style/responsive.css"
 
 const Main: React.FC = () => {
   return (
@@ -28,9 +29,9 @@ const Main: React.FC = () => {
       <ProductsSection />
       <TestimonialsSection />
       <HistorySection />
-      <QuestionSection />
+      {/* <QuestionSection />
       <ContactSection />
-      <FooterSection />
+      <FooterSection /> */}
     </div>
   );
 };

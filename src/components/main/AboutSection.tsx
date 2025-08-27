@@ -12,21 +12,18 @@ const AboutSection: React.FC = () => {
   return (
     <div id="about" className="AboutSection">
       <div className="AboutSection_text">
-        <FadeInSection direction="up" duration={800}>
+        <FadeInSection direction="up" duration={800} className="AboutSection_text_wrap">
           <div className="title_tag flex-center">
             <Shell size={18} color="white" strokeWidth={2} />
             <span>회사소개</span>
           </div>
           <h1>혁신적인 로봇 기술로</h1>
           <h1>미래를 선도합니다</h1>
-          <p>20년간의 로봇 기술 개발 경험을 바탕으로</p>
-          <p>우리는 산업용 로봇팔과 자동화 솔루션 분야의 선두주자입니다.</p>
-          <p>
-            ABB와 같은 글로벌 기업들과 어깨를 나란히 하며 한국의 제조업 혁신을
+          <p>20년간의 로봇 기술 개발 경험을 바탕으로<br></br>우리는 산업용 로봇팔과 자동화 솔루션 분야의 선두주자입니다.<br></br> 같은 글로벌 기업들과 어깨를 나란히 하며 한국의 제조업 혁신을
             이끌어가고 있습니다.
           </p>
         </FadeInSection>
-        <FadeInSection direction="up" duration={800}>
+        <FadeInSection direction="up" duration={800} className="AboutSection_card_wrap">
           <ul className="AboutSection_card">
             <li>
               <div className="AboutSection_card_icon flex-center">
@@ -61,7 +58,7 @@ const AboutSection: React.FC = () => {
           </ul>
         </FadeInSection>
       </div>
-      <div className="AboutSection_image_wrap flex-center">
+      <div className="AboutSection_image_wrap">
         <div className="About_dotted2"></div>
         <div className="AboutSection_image1">
           <img src={AboutSectionImage1} alt="이미지 1" />

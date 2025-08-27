@@ -5,16 +5,18 @@ type AnimatedCounterProps = {
   target: number;
   duration?: number;
   suffix?: string;
-  fontSize?: string | number; // 추가: 폰트 크기
-  margin?: string; // 추가: margin
+  fontSize?: string | number;
+  margin?: string;
+  className?: string; // ✅ 선택적 className 추가
 };
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   target,
   duration = 2000,
   suffix = "",
-  fontSize = "2rem", // 기본값
-  margin = "10px 0", // 기본값
+  fontSize = "2rem",
+  margin = "10px 0",
+  className, // ✅ 받기
 }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -26,7 +28,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimated) {
           const startTime = Date.now();
-          const stepTime = 16; // 약 60fps
+          const stepTime = 16;
 
           const easeOutQuart = (t: number): number => 1 - Math.pow(1 - t, 4);
 
@@ -65,6 +67,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   return (
     <h1
       ref={elementRef}
+      className={className} // ✅ className 적용
       style={{
         fontSize,
         margin,

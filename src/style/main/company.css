@@ -25,7 +25,7 @@
   height: 150px;
   display: flex;
   overflow: hidden;
-  margin: 40px 0px;
+  margin-top: 70px;
   position: relative;
 }
 
@@ -54,4 +54,31 @@
   100% {
     transform: translateX(-50%);
   }
+}
+
+@media (max-width: 900px) {
+.company_card {
+    height: 100px;
+}
+.company_card_inner {
+  animation: scrollLeft 60s linear infinite;
+}
+.company_card li {
+    min-width: 300px;
+}
+}
+
+@media (max-width: 600px) {
+    .Company h1 {
+        font-size: 28px;
+    }
+}
+@media (max-width: 500px) {
+        .Company h1 {
+        font-size: 23px;
+    }
+    .company_card li {
+    padding: 20px 0px;
+    min-width: 250px;
+}
 }

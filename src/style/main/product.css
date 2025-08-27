@@ -24,10 +24,12 @@
   border-radius: 17px;
   padding: 20px;
   display: flex;
+  overflow: hidden;
 }
 
 .main_product_image {
   flex: 1;
+  min-width: 600px;
   border-radius: 17px;
   overflow: hidden;
   border: 1px solid rgb(100, 100, 100);
@@ -93,6 +95,8 @@
   color: white;
   margin: 0px 15px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .main_product_button {
@@ -125,7 +129,7 @@
 
 .sub_product {
   width: 100%;
-  height: 800px;
+  height: 820px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -241,4 +245,209 @@
 
 .more_product:hover {
   background-color: #1e5ef3;
+}
+
+@media (max-width: 1700px) {
+  .ProductsSection {
+    padding: 100px 40px 20px 40px;
+  }
+}
+
+@media (max-width: 1340px) {
+  .main_product_text {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .main_product {
+    padding: 0;
+    border: none;
+  }
+  .main_product_text ul li div {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .ProductsSection_main_icon {
+    stroke: white;
+  }
+  .main_product_image span {
+    z-index: 2;
+  }
+}
+@media (max-width: 1200px) {
+  .sub_product_image {
+    max-height: 350px;
+  }
+  .sub_product {
+    height: 750px;
+  }
+}
+@media (max-width: 1100px) {
+  .sub_product1,
+  .sub_product2 {
+    width: calc(50% - 10px);
+    padding: 15px;
+  }
+}
+@media (max-width: 900px) {
+    .sub_product_image span{
+        font-size: 13px;
+        width: 90px;
+
+    }
+  .ProductsSection_text h1 {
+    font-size: 32px;
+  }
+  .ProductsSection_text p {
+    text-align: center;
+    font-size: 14px;
+  }
+  .main_product_text h1 {
+    font-size: 32px;
+  }
+  .sub_product1,
+  .sub_product2 {
+    width: 100%;
+    display: flex;
+    height: 380px;
+    margin: 10px 0px;
+  }
+  .sub_product_image {
+    max-width: 350px;
+    height: 100%;
+  }
+  .sub_product_wrap{
+    width: 100%;
+    height: 850px;
+  }
+  .sub_product_text{
+    width: calc(100% - 350px);
+    height: 100%;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+  }
+  .sub_product_text p{
+    font-size: 21px;
+  }
+  .sub_product_text span{
+    font-size: 14px;
+  }
+  .sub_product_text ul li span{
+    font-size: 12px;
+  }
+  .sub_product {
+    flex-direction: column;
+  }
+  .sub_product_text button{
+    height: 40px;
+  }
+  .sub_product_text button span{
+    font-size: 12px;
+  }
+}
+@media (max-width: 600px) {
+  .ProductsSection {
+    padding: 100px 10px 20px 10px;
+  }
+}
+@media (max-width: 700px) {
+  .main_product_text {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 800px) {
+      .sub_product_image {
+        max-width: 320px;
+      }
+      .sub_product1, .sub_product2{
+        justify-content: space-between;
+      }
+     
+      .sub_product_text{
+        padding: 10px ;
+      }
+}
+@media (max-width: 750px) {
+    .sub_product_text{
+        position: absolute;
+        height:350px;
+        align-items: center;
+        right: 0;
+        top: 0;
+        padding: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px !important;
+        min-width: 300px;
+    }
+     .sub_product1, .sub_product2{
+        position: relative;
+        overflow: hidden;
+        padding: 0px;
+        border: none;
+      }
+      .sub_product_image{
+        min-width: 100%;
+      }
+      .sub_product_icon{
+        stroke: white;
+      }
+      .sub_product_text ul li div{
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+}
+@media (max-width: 600px) {
+    .sub_product_image span{
+        display: none;
+    }
+    .sub_product_text{
+        width: 100%;
+    }
+    .sub_product_text button{
+        width: calc(100% - 60px);
+    }
+}
+@media (max-width: 500px) {
+  .main_product_text {
+    padding: 80px 10px;
+  }
+  .main_product_text ul {
+    column-gap: 0px;
+  }
+  .main_product_text ul li span {
+    font-size: 12px;
+  }
+  .main_product_text ul li div {
+    width: 30px;
+    height: 30px;
+  }
+  .ProductsSection_main_icon {
+    width: 16px;
+  }
+  .main_product_text h1 {
+    font-size: 28px;
+  }
+  .main_product_text p {
+    font-size: 13px;
+  }
+  .main_product_image span {
+    width: 90px;
+    font-size: 12px;
+  }
+  .main_product_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main_product_button span {
+    font-size: 12px;
+  }
 }

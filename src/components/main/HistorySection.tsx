@@ -100,7 +100,7 @@ const HistorySection: React.FC = () => {
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center HistorySection_text"
       >
         <div className="title_tag flex-center">
           <CalendarDays size={18} color="white" strokeWidth={2} />
@@ -121,7 +121,7 @@ const HistorySection: React.FC = () => {
               index % 2 === 0 ? "left" : "right"
             }`}
           >
-            <FadeInSection direction="up" duration={800}>
+            <FadeInSection direction="up" duration={800} className="HistorySection_card_wrap">
               <div className="history_card">
                 <h3>{yearGroup.year}</h3>
                 <ul>
@@ -142,15 +142,15 @@ const HistorySection: React.FC = () => {
         className="HistorySection_footer"
       >
         <li className="flex-direction-center">
-          <AnimatedCounter target={25} suffix="년" fontSize="42px" />
+          <AnimatedCounter target={25} suffix="년" fontSize="42px" className="HistorySection_footer_couter"/>
           <span>업계 경험</span>
         </li>
         <li className="flex-direction-center">
-          <AnimatedCounter target={1000} suffix="+" fontSize="42px" />
+          <AnimatedCounter target={1000} suffix="+" fontSize="42px" className="HistorySection_footer_couter"/>
           <span> 설치된 로봇</span>
         </li>
         <li className="flex-direction-center">
-          <AnimatedCounter target={15} suffix="개국" fontSize="42px" />
+          <AnimatedCounter target={15} suffix="개국" fontSize="42px" className="HistorySection_footer_couter" />
           <span>해외진출</span>
         </li>
       </FadeInSection>

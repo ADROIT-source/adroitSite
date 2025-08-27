@@ -57,7 +57,7 @@ const QuestionSection: React.FC = () => {
   };
 
   return (
-    <div id="contact" className="QuestionSection">
+    <div id="question" className="QuestionSection">
       <FadeInSection
         direction="up"
         duration={800}

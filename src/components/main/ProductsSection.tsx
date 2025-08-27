@@ -15,9 +15,9 @@ const ProductsSection: React.FC = () => {
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center ProductsSection_text"
       >
-        <div className="title_tag flex-center">
+        <div className="title_tag flex-center product_tag">
           <Box size={18} color="white" strokeWidth={2} />
           <span>제품 소개</span>
         </div>
@@ -27,52 +27,70 @@ const ProductsSection: React.FC = () => {
           제공합니다.
         </p>
       </FadeInSection>
-      <FadeInSection direction="up" duration={800}>
-        <div className="main_product">
-          <div className="main_product_image">
-            <img src={ProductsImage1} alt="" />
-            <span className="flex-center">인기</span>
-          </div>
-          <div className="main_product_text">
-            <h1>R-Series 6축 로봇팔</h1>
-            <p>정밀 조립 작업을 위한 컴팩트한 6축 관절 로봇</p>
-            <ul>
-              <li>
-                <div className="main_product_text_icon flex-center">
-                  <CircleCheckBig color="#1e5ef3" size={20} strokeWidth={1} />
-                </div>
-                <span>최대 하중 1000kg</span>
-              </li>
-              <li>
-                <div className="main_product_text_icon flex-center">
-                  <CircleCheckBig color="#1e5ef3" size={20} strokeWidth={1} />
-                </div>
-                <span>반복 정밀도 ±0.02mm</span>
-              </li>
-              <li>
-                <div className="main_product_text_icon flex-center">
-                  <CircleCheckBig color="#1e5ef3" size={20} strokeWidth={1} />
-                </div>
-                <span>IP54 방진방수</span>
-              </li>
-              <li>
-                <div className="main_product_text_icon flex-center">
-                  <CircleCheckBig color="#1e5ef3" size={20} strokeWidth={1} />
-                </div>
-                <span>협동 로봇 인증</span>
-              </li>
-            </ul>
-            <button className="main_product_button">
-              <span>자세히 보기</span>
-              <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
-            </button>
-          </div>
+      <FadeInSection className="main_product" direction="up" duration={800}>
+        <div className="main_product_image">
+          <img src={ProductsImage1} alt="" />
+          <span className="flex-center">인기</span>
+        </div>
+        <div className="main_product_text">
+          <h1>R-Series 6축 로봇팔</h1>
+          <p>정밀 조립 작업을 위한 컴팩트한 6축 관절 로봇</p>
+          <ul>
+            <li>
+              <div className="main_product_text_icon flex-center">
+                <CircleCheckBig
+                  color="#1e5ef3"
+                  size={20}
+                  strokeWidth={1}
+                  className="ProductsSection_main_icon"
+                />
+              </div>
+              <span>최대 하중 1000kg</span>
+            </li>
+            <li>
+              <div className="main_product_text_icon flex-center">
+                <CircleCheckBig
+                  color="#1e5ef3"
+                  size={20}
+                  strokeWidth={1}
+                  className="ProductsSection_main_icon"
+                />
+              </div>
+              <span>반복 정밀도 ±0.02mm</span>
+            </li>
+            <li>
+              <div className="main_product_text_icon flex-center">
+                <CircleCheckBig
+                  color="#1e5ef3"
+                  size={20}
+                  strokeWidth={1}
+                  className="ProductsSection_main_icon"
+                />
+              </div>
+              <span>IP54 방진방수</span>
+            </li>
+            <li>
+              <div className="main_product_text_icon flex-center">
+                <CircleCheckBig
+                  color="#1e5ef3"
+                  size={20}
+                  strokeWidth={1}
+                  className="ProductsSection_main_icon"
+                />
+              </div>
+              <span>협동 로봇 인증</span>
+            </li>
+          </ul>
+          <button className="main_product_button">
+            <span>자세히 보기</span>
+            <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
+          </button>
         </div>
       </FadeInSection>
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center sub_product_wrap"
       >
         <div className="sub_product">
           <div className="sub_product1">
@@ -86,13 +104,13 @@ const ProductsSection: React.FC = () => {
               <ul>
                 <li>
                   <div className="sub_product_text_icon flex-center">
-                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} />
+                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} className="sub_product_icon" />
                   </div>
                   <span>생산 효율성 50% 증가</span>
                 </li>
                 <li>
                   <div className="sub_product_text_icon flex-center">
-                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} />
+                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} className="sub_product_icon" />
                   </div>
                   <span>PLC 자동화</span>
                 </li>
@@ -114,29 +132,29 @@ const ProductsSection: React.FC = () => {
               <ul>
                 <li>
                   <div className="sub_product_text_icon flex-center">
-                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} />
+                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} className="sub_product_icon" />
                   </div>
                   <span>AI 기반 품질 검사</span>
                 </li>
                 <li>
                   <div className="sub_product_text_icon flex-center">
-                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} />
+                    <CircleCheckBig color="#1e5ef3" size={16} strokeWidth={1} className="sub_product_icon"/>
                   </div>
                   <span>실시간 모니터링</span>
                 </li>
               </ul>
               <button className="flex-center">
                 <span>자세히 보기</span>
-                <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
+                <ArrowRight size={16} color="#ffffff" strokeWidth={2} className="sub_product2_button_icon" />
               </button>
             </div>
           </div>
         </div>
-        <button className="more_product flex-center">
+      </FadeInSection>
+          <button className="more_product flex-center">
           <span>더 많은 제품 보기</span>
           <ArrowRight size={16} color="#ffffff" strokeWidth={2} />
-        </button>
-      </FadeInSection>
+      </button>
     </div>
   );
 };

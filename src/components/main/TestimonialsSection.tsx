@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/main/testimonials.css";
+import "../../style/main/main.css";
 
 import { Quote, Star } from "lucide-react";
 
@@ -15,7 +16,7 @@ const TestimonialsSection: React.FC = () => {
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center TestimonialsSection_text"
       >
         <div className="title_tag flex-center">
           <Quote size={18} color="white" strokeWidth={2} />

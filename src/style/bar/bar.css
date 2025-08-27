@@ -1,7 +1,7 @@
 .Bar {
   width: 100%;
   height: 90px;
-  background-color: #181818; /* 기본: 진한 검정 */
+  background-color: #181818;
   transition: background 0.3s ease, backdrop-filter 0.3s ease,
     box-shadow 0.3s ease;
   position: fixed;
@@ -10,17 +10,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0px 140px;
+  padding: 0px 100px;
 }
 .Bar.shadow {
-  background: rgba(24, 24, 24, 0.6); /* 반투명 */
+  background: rgba(24, 24, 24, 0.6);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .logo {
-  width: 240px;
+  min-width: 240px;
   height: 90px;
   padding: 15px 30px;
 }
@@ -28,10 +28,16 @@
   width: 100%;
   height: 100%;
 }
-.bar_menu {
+
+.bar_menu_wrap {
+  width: 100%;
   height: 100%;
 }
-.bar_menu li , .bar_menu a{
+.bar_menu {
+  display: flex;
+}
+.bar_menu li,
+.bar_menu a {
   width: fit-content;
   list-style: none;
   margin: 0px 30px;
@@ -46,7 +52,8 @@
   color: white;
 }
 
-.bar_menu li::after, .bar_menu a::after {
+.bar_menu li::after,
+.bar_menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -58,15 +65,14 @@
   transform-origin: left;
   transition: transform 0.3s ease;
 }
-.bar_menu li:hover::after, .bar_menu a:hover::after {
+.bar_menu li.active::after,
+.bar_menu a.active::after {
   transform: scaleX(1);
 }
-.contact_us {
-  width: 200px;
-  height: 100%;
-}
-.contact_us_button {
-  width: 150px;
+
+.contact_us_button,
+.toggle_contact_us_button {
+  min-width: 150px;
   height: 50px;
   border-radius: 7px;
   outline: none;
@@ -74,7 +80,8 @@
   background-color: #1e5ef3;
   transition: background 0.3s ease-in-out;
 }
-.contact_us_button span {
+.contact_us_button span,
+.toggle_contact_us_button span {
   color: white;
   font-size: 15px;
   margin-right: 10px;
@@ -82,10 +89,123 @@
 .left_icon {
   transition: all 0.3s ease;
 }
-.contact_us_button:hover .left_icon {
+.contact_us_button:hover .left_icon,
+.toggle_contact_us_button:hover .left_icon {
   transform: translateX(10px);
 }
-
-.contact_us_button:hover {
+.contact_us_button:hover,
+.toggle_contact_us_button:hover {
   background-color: #0040d4;
+}
+
+.toggle_menu_wrap {
+  display: none;
+}
+
+/* 토글 메뉴 */
+.toggle_bar_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  left: 0;
+  background-color: #181818;
+  padding: 20px;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.toggle_bar_menu.open {
+  opacity: 1;
+  max-height: 500px;
+}
+
+.toggle_bar_menu li,
+.toggle_bar_menu a,
+.toggle_contact_us_button {
+  width: 100%;
+  height: 60px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  border-radius: 7px;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.toggle_bar_menu li:hover,
+.toggle_bar_menu a:hover {
+  background-color: rgb(40, 40, 40);
+}
+.toggle_bar_menu.open li,
+.toggle_bar_menu.open a,
+.toggle_bar_menu.open .toggle_contact_us_button {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toggle_contact_us_button {
+  margin-top: 30px;
+}
+
+.toggle_menu_wrap {
+  padding: 10px;
+  border-radius: 7px;
+  transition: background 0.3s ease;
+}
+.toggle_menu_wrap:hover {
+  background-color: #52525296;
+}
+
+@media (max-width: 1440px) {
+  .Bar {
+    padding: 0px 60px;
+  }
+}
+@media (max-width: 1340px) {
+  .contact_us_button,
+  .bar_menu {
+    display: none;
+  }
+  .toggle_menu_wrap {
+    display: flex;
+  }
+  .bar_menu_wrap {
+    width: 0px;
+  }
+  .Bar.shadow {
+    box-shadow: none;
+    border-bottom: none;
+    background-color: #181818;
+  }
+  .logo {
+    min-width: 220px;
+    height: 80px;
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .Bar {
+    padding: 0px 20px;
+  }
+  .HeroSection_card li:nth-child(2) {
+    margin: 0px 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo {
+    min-width: 180px;
+    height: 70px;
+    padding: 15px 30px;
+  }
+  .Bar {
+    padding: 0px 10px;
+  }
 }
