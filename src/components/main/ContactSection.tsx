@@ -11,13 +11,11 @@ const ContactSection: React.FC = () => {
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center ContactSection_text"
       >
         <h1>문의하기</h1>
         <p className="contact_desc">
-          로봇 자동화 솔루션에 대한 궁금한 점이 있으시면 언제든지 연락주세요.
-        </p>
-        <p className="contact_desc">
+          로봇 자동화 솔루션에 대한 궁금한 점이 있으시면 언제든지 연락주세요.<br></br>
           전문 엔지니어가 맞춤형 상담을 제공해드립니다.
         </p>
       </FadeInSection>

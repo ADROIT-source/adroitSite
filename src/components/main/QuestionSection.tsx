@@ -61,7 +61,7 @@ const QuestionSection: React.FC = () => {
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center"
+        className="flex-direction-center QuestionSection_text"
       >
         <div className="title_tag flex-center">
           <Info size={18} color="white" strokeWidth={2} />

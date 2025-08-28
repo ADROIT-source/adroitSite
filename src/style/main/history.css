@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .HistorySection h1 {
@@ -128,4 +129,74 @@
 
 .HistorySection_footer li:nth-child(2) {
   margin: 0px 30px;
+}
+@media (max-width: 1340px) {
+      .HistorySection {
+      padding: 60px 180px 20px 180px;
+  }
+}
+@media (max-width: 1500px) {
+  .HistorySection {
+    padding: 60px 50px 20px 50px;
+  }
+}
+@media (max-width: 1200px) {
+  .history div {
+    justify-content: center !important;
+    margin: 80px 0px;
+    background-color: #181818;
+  }
+  .history_card {
+    margin: 0px !important;
+  }
+  .HistorySection_card_wrap {
+    margin: 0 !important;
+  }
+  .HistorySection {
+    min-height: 320vh;
+  }
+}
+
+@media (max-width: 800px) {
+  .HistorySection_text h1 {
+    font-size: 32px;
+  }
+  .HistorySection_text p {
+    font-size: 14px;
+    text-align: center;
+  }
+  .HistorySection_footer_couter {
+    font-size: 25px !important;
+  }
+  .HistorySection_footer li span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .HistorySection {
+    padding: 60px 15px 20px 15px;
+  }
+  .HistorySection_footer li:nth-child(2) {
+    margin: 0px 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .history_card {
+    width: 320px;
+    padding: 15px;
+  }
+
+  .history_card li {
+    font-size: 12px;
+  }
+  .history_card h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .HistorySection {
+    min-height: 260vh !important;
+  }
 }

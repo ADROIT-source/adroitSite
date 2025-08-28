@@ -22,10 +22,10 @@
 .logo {
   min-width: 240px;
   height: 90px;
-  padding: 15px 30px;
+  padding: 15px 0px;
 }
 .logo img {
-  width: 100%;
+  width: calc(100% - 30px);
   height: 100%;
 }
 
@@ -166,8 +166,16 @@
   .Bar {
     padding: 0px 60px;
   }
+  .toggle_menu_wrap {
+    padding: 5px;
+  }
+  
+  
 }
 @media (max-width: 1340px) {
+    .Bar {
+    height: 60px;
+  }
   .contact_us_button,
   .bar_menu {
     display: none;
@@ -184,9 +192,9 @@
     background-color: #181818;
   }
   .logo {
-    min-width: 220px;
-    height: 80px;
-    padding: 15px 30px;
+    min-width: 180px;
+    height: 60px;
+    padding: 7px 0px;
   }
 }
 
@@ -201,11 +209,8 @@
 
 @media (max-width: 600px) {
   .logo {
-    min-width: 180px;
-    height: 70px;
-    padding: 15px 30px;
-  }
-  .Bar {
-    padding: 0px 10px;
+    min-width: 150px;
+    height: 50px;
+    padding: 5px 0px;
   }
 }

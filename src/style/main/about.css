@@ -2,6 +2,7 @@
   padding: 100px 0px 20px 180px;
   display: flex;
   position: relative;
+  align-items: center;
 }
 .AboutSection_text {
   height: 100%;
@@ -148,6 +149,14 @@
 }
 
 @media (max-width: 1340px) {
+    .AboutSection {
+    padding: 60px 40px 20px 40px;
+  }
+  .AboutSection_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
     .AboutSection_image_wrap {
     display: none;
   }
@@ -182,7 +191,7 @@
 
 @media (max-width: 600px) {
   .AboutSection {
-    padding: 100px 10px 20px 10px;
+    padding: 60px 10px 20px 10px;
   }
   .AboutSection_card li {
     width: 180px;

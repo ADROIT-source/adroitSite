@@ -1,8 +1,9 @@
 .TestimonialsSection {
-  padding: 100px 180px 20px 180px;
+  padding: 60px 180px 20px 180px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .TestimonialsSection h1 {
@@ -81,13 +82,13 @@
 
 @media (max-width: 1340px) {
   .TestimonialsSection {
-    padding: 100px 50px 20px 50px;
+    padding: 60px 50px 20px 50px;
   }
 }
 
 @media (max-width: 900px) {
   .TestimonialsSection {
-    height: 160svh !important;
+    min-height: 160svh !important;
   }
   .TestimonialsSection_card {
     flex-direction: column;
@@ -114,10 +115,13 @@
     font-size: 14px;
     text-align: center;
   }
+  .TestimonialsSection {
+    padding: 60px 10px 20px 10px;
+  }
 }
 
-@media (max-width: 600px) {
-  .TestimonialsSection {
-    padding: 100px 10px 20px 10px;
+@media (min-height: 1000px) {
+  .TestimonialsSection{
+    min-height: 120vh !important;
   }
 }

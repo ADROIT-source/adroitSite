@@ -15,6 +15,7 @@
   color: white;
   font-size: 16px;
   margin: 10px 0px;
+  text-align: center;
 }
 
 .ContactSection_card_wrap{
@@ -173,4 +174,68 @@
 
 .contact_button:hover{
     background-color: #0040d4;
+}
+
+@media (max-width: 1700px) {
+  .ContactSection {
+    padding: 90px 50px 20px 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .ContactSection_info{
+    display: none;
+  }
+  .ContactSection_submit_wrap {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 900px) {
+  .ContactSection_text h1{
+    font-size: 32px;
+
+  }
+  .ContactSection_text p{
+    font-size: 15px;
+  }
+}
+@media (max-width: 600px) {
+    .ContactSection {
+    padding: 60px 10px 20px 10px;
+  }
+  .ContactSection_submit{
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 500px) {
+    .ContactSection_text h1{
+    font-size: 28px;
+
+  }
+  .ContactSection_text p{
+    font-size: 14px;
+  }
+  .ContactSection_card_wrap{
+    height: 900px;
+  }
+  .contactSection_user_info, .user_contact_info{
+    flex-direction: column;
+        height: 200px;
+        gap: 0px;
+  }
+  .contactSection_user_info li, .user_contact_info li{
+    width: 100%;
+  }
+  .contact_desc br{
+    display: none;
+}
+
+}
+
+@media (min-height: 1000px) {
+  .ContactSection {
+    height: 100vh !important;
+  }
 }

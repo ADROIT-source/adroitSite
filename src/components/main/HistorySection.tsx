@@ -1,5 +1,6 @@
 import React from "react";
 import "../../style/main/history.css";
+import "../../style/main/main.css";
 import { CalendarDays } from "lucide-react";
 import FadeInSection from "../../animations/ScrollFadeInSection";
 import AnimatedCounter from "../../animations/AnimatedCounter";

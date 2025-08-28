@@ -15,10 +15,10 @@ const FooterSection: React.FC = () => {
               <img src={LogoImage} alt="하단 로고" />
             </div>
               <p>
-                첨단 로봇 기술로 제조업의 혁신을 이끌어가는 선도 기업입니다.
+                첨단 로봇 기술로 제조업의 혁신을 이끌어가는 선도 기업입니다.<br></br>
                 고품질의 로봇팔과 자동화 솔루션을 제공합니다.
               </p>
-            <li className="test">
+            <li>
               <MapPin color="#1e5ef3" size={18} />
               <span>서울 특별시 강남구 테헤란로 123</span>
             </li>
@@ -30,6 +30,15 @@ const FooterSection: React.FC = () => {
               <Mail color="#1e5ef3" size={18} />
               <span>info@gmail.com</span>
             </li>
+            <div className="responsive_menu">
+              <a href="#">서울 특별시 강남구 테헤란로 123</a>
+              <a href="#">02-1234-5678</a>
+              <a href="#">info@gmail.com</a>
+              <a href="#">제품</a>
+              <a href="#">채용</a>
+              <a href="#">로봇팔</a>
+              <a href="#">맞춤 솔루션</a>
+            </div>
           </ul>
           <ul>
             <p>빠른 링크</p>

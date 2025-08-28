@@ -1,6 +1,7 @@
 .HeroSection {
   padding: 100px 180px 20px 180px;
   display: flex;
+  align-items: center;
 }
 .HeroSection_text {
   height: 100%;
@@ -275,7 +276,7 @@
     align-items: center;
   }
   .HeroSection {
-    padding: 100px 30px 20px 30px;
+    padding: 60px 30px 20px 30px;
     justify-content: space-around;
   }
 }
@@ -327,7 +328,7 @@
     text-align: center;
   }
   .HeroSection {
-    padding: 100px 10px 20px 10px;
+    padding: 60px 10px 20px 10px;
     justify-content: space-around;
   }
   .video_button {

@@ -1,0 +1,137 @@
+.ProductsSection2 {
+  padding: 10px 50px 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ProductsSection2_text h1 {
+  color: white;
+  font-size: 42px;
+  margin: 15px 0px;
+}
+.ProductsSection2_text p {
+  color: white;
+  text-align: center;
+}
+.product_content_wrap {
+  width: fit-content;
+  /* border: 1px solid white; */
+  height: 630px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid white; */
+}
+.product_content {
+  width: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+
+}
+.product_image {
+  height: 500px;
+  width: 700px;
+  border-radius: 21px;
+  overflow: hidden;
+  /* border: 1px solid white; */
+  margin-right: 20px;
+}
+
+
+.product_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 21px;
+}
+.product_text {
+  width: 510px;
+  height: 100%;
+  border-radius: 21px;
+    border: 1px solid rgb(100, 100, 100);
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.product_text li{
+    width: 100%;
+    /* border: 1px solid white; */
+    margin: 10px 0px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.product_text li p{
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product_text li span{
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    width: calc(100% - 20px);
+    /* border: 1px solid white; */
+    height: fit-content;
+    margin-left: 10px;
+    
+}
+.product_menu{
+    display: flex;
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    margin-top: 30px;
+}
+.product_menu li {
+  flex: 1;
+  height: calc(100% - 20px);
+  border-top: 2px solid rgb(125, 125, 125);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s ease; 
+  padding: 0px 10px;
+  opacity: 0.7; 
+}
+.product_menu li:nth-child(2),
+.product_menu li:nth-child(3) {
+    margin: 0px 10px;
+}
+
+.product_menu li:hover {
+  border-top: 2px solid rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.product_menu li.active {
+  border-top: 2px solid rgb(255, 255, 255);
+  opacity: 1;
+}
+
+.product_menu li p,
+.product_menu li span {
+  transition: color 0.4s ease, opacity 0.4s ease; 
+}
+
+.product_menu li.active p {
+  color: #fff;
+}
+
+.product_menu li.active span {
+  color: #bbb; 
+  font-size: 14px;
+}
+
+.product_menu li:not(.active) p {
+  color: rgb(180, 180, 180);
+}
+
+.product_menu li:not(.active) span {
+  color: rgb(120, 120, 120);
+  font-size: 14px;
+}

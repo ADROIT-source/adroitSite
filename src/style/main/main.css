@@ -1,38 +1,46 @@
 .HeroSection,
 .AboutSection,
 .ProductsSection,
+.ProductsSection2,
 .TestimonialsSection,
 .HistorySection,
 .ContactSection,
 .QuestionSection,
-.FooterSection {
+.FooterSection,
+.ProjectSection {
   width: 100%;
   height: 100svh;
+  min-height: 100svh;
   background-color: #181818;
   /* border: 1px solid black; */
 }
 
+.ProjectSection{
+  min-height: fit-content;
+  background-color: rgb(252, 252, 252)
+}
+
 .Company {
   width: 100%;
-  height: 50svh;
+  height: 60svh;
 }
 
 .ProductsSection {
-  height: 250svh;
+  min-height: 250svh;
 }
 
 .HistorySection {
-  height: 300vh;
+  min-height: 280vh;
 }
 .QuestionSection {
-  height: 170vh;
+  min-height: 140vh;
   /* height: fit-content; */
 }
 .ContactSection{
-    height: 150vh;
+    height: 110vh;
 }
 .FooterSection{
-  height: 70vh;
+  min-height: 70vh;
   background-color: #131313;
 }
 .title_tag {

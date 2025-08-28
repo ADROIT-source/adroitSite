@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "../../style/bar/bar.css";
 import { MoveRight, AlignJustify, AlignLeft } from "lucide-react";
-import LogoImage from "../../assets/images/logo.png";
+import LogoImage from "../../assets/images/logo3.png";
 
 const allSections = [
   "hero",
   "company",
   "about",
-  "product",
-  "testimonials",
+  "product2",
+  "project",
+  // "testimonials",
   "history",
   "question",
   "contact",
 ];
-const menuSections = ["hero", "about", "product", "history", "contact"];
+const menuSections = ["hero", "about", "product2", "history", "contact"];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -81,8 +82,8 @@ const Bar: React.FC = () => {
             About
           </li>
           <li
-            className={activeSection === "product" ? "active" : ""}
-            onClick={() => scrollToSection("product")}
+            className={activeSection === "product2" ? "active" : ""}
+            onClick={() => scrollToSection("product2")}
           >
             Product
           </li>
@@ -98,17 +99,17 @@ const Bar: React.FC = () => {
           >
             Contact
           </li>
-          <a href="#">인공지능 챔피언스</a>
+          <a href="#">Salad Bot</a>
         </ul>
 
         {/* 토글 메뉴 */}
         <ul className={`toggle_bar_menu ${menuOpen ? "open" : ""}`}>
           <li onClick={() => scrollToSection("hero")}>Home</li>
           <li onClick={() => scrollToSection("about")}>About</li>
-          <li onClick={() => scrollToSection("product")}>Product</li>
+          <li onClick={() => scrollToSection("product2")}>Product</li>
           <li onClick={() => scrollToSection("history")}>History</li>
           <li onClick={() => scrollToSection("contact")}>Contact</li>
-          <a href="#">인공지능 챔피언스</a>
+          <a href="#">Salad Bot</a>
           <button
             className="toggle_contact_us_button flex-center"
             onClick={() => scrollToSection("contact")}
