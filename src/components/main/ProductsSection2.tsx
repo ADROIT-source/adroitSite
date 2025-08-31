@@ -4,9 +4,10 @@ import { Box } from "lucide-react";
 
 import FadeInSection from "../../animations/ScrollFadeInSection";
 
-import ProductsImage1 from "../../assets/images/product_image1.jpg";
-import ProductsImage2 from "../../assets/images/product_image2.jpg";
-import ProductsImage3 from "../../assets/images/product_image3.jpg";
+import ProductsImage1 from "../../assets/images/product2.png";
+import ProductsImage2 from "../../assets/images/product4.jpg";
+import ProductsImage3 from "../../assets/images/product3.png";
+import ProductsImage4 from "../../assets/images/product1.png";
 
 const menuData = [
   {
@@ -44,9 +45,11 @@ const menuData = [
     ],
   },
   {
-    image: ProductsImage1, // 테스트: 3번째도 임시로 image1
+    image: ProductsImage3,
     texts: [
-      { title: "지능형 폐기물 식별", desc: "3번째 메뉴 클릭 시 보여질 내용" },
+      { title: "지능형 폐기물 식별",
+        desc: "첨단 AI가 최대 56종의 재활용 재료를 실시간으로 식별·분류합니다."
+      },
       {
         title: "고속·고정밀 분류",
         desc: "빠르고 정밀한 로봇 분류로 재활용률과 운영 효율성을 향상시킵니다.",
@@ -58,7 +61,7 @@ const menuData = [
     ],
   },
   {
-    image: ProductsImage3, // 👉 요청하신대로 4번째 클릭하면 image3
+    image: ProductsImage4,
     texts: [
       {
         title: "유연한 자재 운송",
@@ -88,13 +91,12 @@ const ProductsSection2: React.FC = () => {
       >
         <div className="title_tag flex-center product_tag">
           <Box size={18} color="white" strokeWidth={2} />
-          <span>제품 소개</span>
+          <span>기술 소개</span>
         </div>
-        <h1>혁신 · 자동화 · 성장</h1>
+        <h1>로봇 · AI · 스마트팩토리</h1>
         <p>
-          최첨단 로봇 및 AI 솔루션이 산업을 혁신하여
-          <br />
-          효율성과 지속 가능성을 높이는 방법을 확인해 보세요
+          차별화된 자동화 기술과 인공지능 솔루션으로<br />
+          산업의 미래를 선도하고 글로벌 경쟁력을 강화합니다
         </p>
       </FadeInSection>
       <FadeInSection direction="up" duration={800}>

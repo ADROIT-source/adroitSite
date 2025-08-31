@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../style/bar/bar.css";
 import { MoveRight, AlignJustify, AlignLeft } from "lucide-react";
-import LogoImage from "../../assets/images/logo3.png";
+import LogoImage from "../../assets/images/logo1.png";
 
 const allSections = [
   "hero",
@@ -99,7 +99,7 @@ const Bar: React.FC = () => {
           >
             Contact
           </li>
-          <a href="#">Salad Bot</a>
+          <a href="/saladybot">Salad Bot</a>
         </ul>
 
         {/* 토글 메뉴 */}
@@ -109,9 +109,9 @@ const Bar: React.FC = () => {
           <li onClick={() => scrollToSection("product2")}>Product</li>
           <li onClick={() => scrollToSection("history")}>History</li>
           <li onClick={() => scrollToSection("contact")}>Contact</li>
-          <a href="#">Salad Bot</a>
+          <a href="/saladybot">Salad Bot</a>
           <button
-            className="toggle_contact_us_button flex-center"
+            className="toggle_contact_us_button"
             onClick={() => scrollToSection("contact")}
           >
             <span>문의하기</span>
@@ -121,7 +121,7 @@ const Bar: React.FC = () => {
       </div>
 
       <button
-        className="contact_us_button flex-center"
+        className="contact_us_button"
         onClick={() => scrollToSection("contact")}
       >
         <span>문의하기</span>
@@ -130,7 +130,7 @@ const Bar: React.FC = () => {
 
       {/* 햄버거 버튼 */}
       <div
-        className="toggle_menu_wrap flex-center"
+        className="toggle_menu_wrap"
         onClick={() => setMenuOpen(!menuOpen)}
       >
         {menuOpen ? (

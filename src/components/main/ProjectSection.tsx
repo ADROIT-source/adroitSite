@@ -84,7 +84,7 @@ const ProjectSection: React.FC = () => {
         <Quote size={18} color="white" strokeWidth={2} />
         <span>Our Clients</span>
       </div>
-      <h1>적으로 입증된 역량, 신뢰로 쌓아온 전문성</h1>
+      <h1>실적으로 입증된 역량, 신뢰로 쌓아온 전문성</h1>
 
       <div className="project_grid">
         {projectData.map((item, i) => (

@@ -11,6 +11,7 @@ import QuestionSection from "../components/main/QuestionSection";
 import Company from "../components/main/CompanySection";
 import ProjectSection from "../components/main/ProjectSection";
 import FooterSection from "../components/main/FooterSection";
+import FooterSection2 from "../components/main/FooterSection2";
 // 바 메뉴
 
 import Bar from "../components/bar/bar";
@@ -28,7 +29,7 @@ const Main: React.FC = () => {
       <HeroSection />
       <Company />
       <AboutSection />
-      {/* <ProductsSection2 /> */}
+      <ProductsSection2 />
       <ProjectSection />
       {/* <ProductsSection /> */}
       {/* <TestimonialsSection /> */}
@@ -36,6 +37,7 @@ const Main: React.FC = () => {
       <QuestionSection />
       <ContactSection />
       {/* <FooterSection /> */}
+      <FooterSection2 />
     </div>
   );
 };

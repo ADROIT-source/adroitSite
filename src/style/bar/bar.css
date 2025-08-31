@@ -6,7 +6,7 @@
     box-shadow 0.3s ease;
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,8 +20,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 .logo {
-  min-width: 240px;
-  height: 90px;
+  min-width: 190px;
+  height: 80px;
   padding: 15px 0px;
 }
 .logo img {
@@ -79,6 +79,9 @@
   border: none;
   background-color: #1e5ef3;
   transition: background 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .contact_us_button span,
 .toggle_contact_us_button span {
@@ -173,12 +176,12 @@
   
 }
 @media (max-width: 1340px) {
-    .Bar {
+    /* .Bar {
     height: 60px;
-  }
+  } */
   .contact_us_button,
   .bar_menu {
-    display: none;
+    display: none !important;
   }
   .toggle_menu_wrap {
     display: flex;
@@ -192,9 +195,9 @@
     background-color: #181818;
   }
   .logo {
-    min-width: 180px;
-    height: 60px;
-    padding: 7px 0px;
+    min-width: 160px;
+    height: 70px;
+    padding: 15px 0px;
   }
 }
 

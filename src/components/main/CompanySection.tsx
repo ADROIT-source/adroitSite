@@ -40,8 +40,8 @@ const Company: React.FC = () => {
   return (
     <div className="Company">
       <FadeInSection direction="up" duration={800}>
-        <span className="flex-center">신뢰받는 파트너</span>
-        <h1 className="flex-center">대한민국 대표 기업들과 함께합니다.</h1>
+        <span className="flex-center">Trusted by Industry Leaders</span>
+        <h1 className="flex-center">국내외 대표 기업들이 선택한 파트너.</h1>
       </FadeInSection>
       <FadeInSection direction="up" duration={800} className="company_card">
         <div className="company_card_inner">

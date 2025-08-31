@@ -11,179 +11,178 @@
   margin: 10px 0px;
 }
 
-.contact_desc{
+.contact_desc {
   color: white;
   font-size: 16px;
   margin: 10px 0px;
   text-align: center;
 }
 
-.ContactSection_card_wrap{
-    width: 100%;
-    height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px 0px;
+/* 카드 전체 wrap */
+.ContactSection_card_wrap {
+  width: 100%;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0px;
 }
 
-.ContactSection_info{
-    width: 400px;
-    height: 100%;
-    /* border: 1px solid white; */
-    flex-direction: column;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 15px;
+/* 좌측 회사 정보 카드 */
+.ContactSection_info {
+  width: 400px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 15px;
 }
-.ContactSection_info li{
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding: 0px 30px;
-    background-color: rgb(30, 30, 30);
-
+.ContactSection_info li {
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0px 30px;
+  background-color: rgb(30, 30, 30);
 }
-.ContactSection_icon{
-    width: 60px;
-    height: 60px;
-    border-radius: 17px;
-    background-color: rgba(0, 102, 255, 0.2);
-    margin-right: 40px;
+.ContactSection_icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 17px;
+  background-color: rgba(0, 102, 255, 0.2);
+  margin-right: 40px;
 }
-
-.ContactSection_info_text p{
-    font-size: 16px;
-    color: white;
-    margin: 5px 0px;
+.ContactSection_info_text p {
+  font-size: 16px;
+  color: white;
+  margin: 5px 0px;
 }
-.ContactSection_info_text span{
-    font-size: 13px;
-    color: white;
+.ContactSection_info_text span {
+  font-size: 13px;
+  color: white;
 }
 
-.ContactSection_submit_wrap{
-    width: calc(100% - 400px);
-    height: 100%;
-    padding: 0px 30px;
+/* 우측 상담 신청 폼 */
+.ContactSection_submit_wrap {
+  width: calc(100% - 400px);
+  height: 100%;
+  padding: 0px 30px;
 }
 
-.ContactSection_submit{
-    border-radius: 7px;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(30, 30, 30);
-    padding: 20px 40px;
+.ContactSection_submit {
+  border-radius: 7px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(30, 30, 30);
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
 }
 
-
-.ContactSection_submit span{
-    color: white;
-}
-.ContactSection_submit p{
-    width: 100%;
-    height: 30px;
-    color: white;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    margin: 10px 0px 25px 0px;
-}
-.ContactSection_submit li{
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0px;
+.ContactSection_submit p {
+  width: 100%;
+  height: 30px;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0px 25px 0px;
 }
 
-.contactSection_user_info, .user_contact_info{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    gap: 20px;
-    height: 100px;
-    align-items: center;
-}
-.contactSection_user_info li, .user_contact_info li{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.ContactSection_submit label {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: white;
 }
 
-.contactSection_user_info li span,.user_contact_info li span, .ContactSection_submit li span{
-    margin-bottom: 10px;
-    font-size: 13px;
+.ContactSection_submit input,
+.ContactSection_submit textarea {
+  width: 100%;
+  border: none;
+  border-radius: 7px;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  padding: 0px 10px;
+  outline: none;
+  font-size: 14px;
 }
 
-.contactSection_user_info li input,.user_contact_info li input, .ContactSection_submit li input{
-    height: 35px;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    border-radius: 7px;
-    color: white;
-    padding: 0px 10px;
-    outline: none;
+.ContactSection_submit input {
+  height: 35px;
 }
-.user_contact_info li input:focus, 
-.contactSection_user_info li input:focus, 
-.ContactSection_submit li input:focus{
-    outline: 2px solid #1e5ef3;
-}
-
-.ContactSection_submit li textarea{
-    height: 100px;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    border-radius: 7px;
-    color: white;
-    padding: 10px;
-    resize: none;
-    outline: none;
-    font-size: 16px;
-}
-.ContactSection_submit li textarea:focus {
+.ContactSection_submit input:focus,
+.ContactSection_submit textarea:focus {
   outline: 2px solid #1e5ef3;
 }
-.contact_chectbox{
-    width: 100%;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    margin: 15px 0px;
-}
-.contact_chectbox span{
-    font-size: 13px;
-}
-.contact_chectbox input{
-    width: 30px;
-    width: 30px;
+
+.ContactSection_submit textarea {
+  height: 100px;
+  resize: none;
+  padding: 10px;
+  font-size: 15px;
 }
 
-.contact_button{
-    width: 100%;
-    height: 40px;
-    margin: 10px 0px;
-    outline: none;
-    border: none;
-    color: white;
-    background-color: #1e5ef3;
-    border-radius: 7px;
-    transition: background 0.3s ease-in-out;
+/* 인풋 그룹 (flex) */
+.contactSection_user_info,
+.user_contact_info {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.contactSection_user_info > div,
+.user_contact_info > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.contact_button:hover{
-    background-color: #0040d4;
+/* 관심 서비스, 문의 내용 */
+.contact_interest_product,
+.Inquiry_details {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0px;
 }
 
+/* 체크박스 안내 */
+.contact_chectbox {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 15px 0px;
+}
+.contact_chectbox span {
+  font-size: 13px;
+  color: white;
+}
+
+/* 버튼 */
+.contact_button {
+  width: 100%;
+  height: 40px;
+  margin: 10px 0px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #1e5ef3;
+  border-radius: 7px;
+  transition: background 0.3s ease-in-out;
+}
+.contact_button:hover {
+  background-color: #0040d4;
+}
+
+/* 반응형 */
 @media (max-width: 1700px) {
   .ContactSection {
     padding: 90px 50px 20px 50px;
   }
 }
-
 @media (max-width: 1100px) {
-  .ContactSection_info{
+  .ContactSection_info {
     display: none;
   }
   .ContactSection_submit_wrap {
@@ -192,48 +191,41 @@
   }
 }
 @media (max-width: 900px) {
-  .ContactSection_text h1{
+  .ContactSection_text h1 {
     font-size: 32px;
-
   }
-  .ContactSection_text p{
+  .ContactSection_text p {
     font-size: 15px;
   }
 }
 @media (max-width: 600px) {
-    .ContactSection {
+  .ContactSection {
     padding: 60px 10px 20px 10px;
   }
-  .ContactSection_submit{
+  .ContactSection_submit {
     padding: 20px 20px;
   }
 }
-
 @media (max-width: 500px) {
-    .ContactSection_text h1{
+  .ContactSection_text h1 {
     font-size: 28px;
-
   }
-  .ContactSection_text p{
+  .ContactSection_text p {
     font-size: 14px;
   }
-  .ContactSection_card_wrap{
-    height: 900px;
-  }
-  .contactSection_user_info, .user_contact_info{
+  .ContactSection_card_wrap {
+    height: auto;
     flex-direction: column;
-        height: 200px;
-        gap: 0px;
   }
-  .contactSection_user_info li, .user_contact_info li{
-    width: 100%;
+  .contactSection_user_info,
+  .user_contact_info {
+    flex-direction: column;
+    gap: 10px;
   }
-  .contact_desc br{
+  .contact_desc br {
     display: none;
+  }
 }
-
-}
-
 @media (min-height: 1000px) {
   .ContactSection {
     height: 100vh !important;

@@ -143,16 +143,16 @@ const HistorySection: React.FC = () => {
         className="HistorySection_footer"
       >
         <li className="flex-direction-center">
-          <AnimatedCounter target={25} suffix="년" fontSize="42px" className="HistorySection_footer_couter"/>
+          <AnimatedCounter target={20} suffix="년" fontSize="42px" className="HistorySection_footer_couter"/>
           <span>업계 경험</span>
         </li>
         <li className="flex-direction-center">
-          <AnimatedCounter target={1000} suffix="+" fontSize="42px" className="HistorySection_footer_couter"/>
-          <span> 설치된 로봇</span>
+          <AnimatedCounter target={32} suffix="+" fontSize="42px" className="HistorySection_footer_couter"/>
+          <span>완료된 프로젝트</span>
         </li>
         <li className="flex-direction-center">
-          <AnimatedCounter target={15} suffix="개국" fontSize="42px" className="HistorySection_footer_couter" />
-          <span>해외진출</span>
+          <AnimatedCounter target={20} suffix="+" fontSize="42px" className="HistorySection_footer_couter" />
+          <span>직원수</span>
         </li>
       </FadeInSection>
     </div>
