@@ -45,16 +45,16 @@ const initialFAQs: FAQItem[] = [
 ];
 
 const QuestionSection: React.FC = () => {
-  const [faqs, setFaqs] = useState<FAQItem[]>(initialFAQs);
+  const [faqs] = useState<FAQItem[]>(initialFAQs);
   const [expanded, setExpanded] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setExpanded((prev) => (prev === index ? null : index));
   };
 
-  const addFAQ = (newFAQ: FAQItem) => {
-    setFaqs([...faqs, newFAQ]);
-  };
+  // const addFAQ = (newFAQ: FAQItem) => {
+  //   setFaqs([...faqs, newFAQ]);
+  // };
 
   return (
     <div id="question" className="QuestionSection">

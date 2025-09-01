@@ -2,7 +2,7 @@ import React from "react";
 
 import "../../style/main/footer2.css";
 
-import FadeInSection from "../../animations/ScrollFadeInSection";
+// import FadeInSection from "../../animations/ScrollFadeInSection";
 
 import KawasakiLogo from "../../assets/logo/kawasaki.png";
 import InovanceLogo from "../../assets/logo/inovance.png";
