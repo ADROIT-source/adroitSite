@@ -1,4 +1,3 @@
-// AnimatedCounter.tsx
 import React, { useEffect, useState, useRef } from "react";
 
 type AnimatedCounterProps = {
@@ -7,7 +6,7 @@ type AnimatedCounterProps = {
   suffix?: string;
   fontSize?: string | number;
   margin?: string;
-  className?: string; // ✅ 선택적 className 추가
+  className?: string;
 };
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -16,13 +15,17 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   suffix = "",
   fontSize = "2rem",
   margin = "10px 0",
-  className, // ✅ 받기
+  className,
 }) => {
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const elementRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
+    const currentElement = elementRef.current; // ✅ ref 복사
+
+    if (!currentElement) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
@@ -47,8 +50,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
           }, stepTime);
 
           setHasAnimated(true);
-
-          return () => clearInterval(timer);
         }
       },
       {
@@ -57,17 +58,18 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     );
 
-    if (elementRef.current) observer.observe(elementRef.current);
+    observer.observe(currentElement);
 
+    // ✅ cleanup에서 ref.current 대신 변수 사용
     return () => {
-      if (elementRef.current) observer.unobserve(elementRef.current);
+      observer.unobserve(currentElement);
     };
   }, [target, duration, hasAnimated]);
 
   return (
     <h1
       ref={elementRef}
-      className={className} // ✅ className 적용
+      className={className}
       style={{
         fontSize,
         margin,
