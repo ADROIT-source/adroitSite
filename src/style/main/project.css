@@ -13,8 +13,9 @@
   opacity: 0.8;
 }
 
-.ProjectSection h1 {
-  font-size: 28px;
+.ProjectSection_text h1 {
+  font-size: clamp(21px, 4vw, 28px);
+  text-align: center;
   margin: 20px 0 50px;
 }
 

@@ -62,7 +62,6 @@ const HeroSection: React.FC = () => {
           </div>
           <h1>From Anything</h1>
           <h1>To Everything</h1>
-          <h1></h1>
           <p>
             최고의 기술력과 신뢰를 바탕으로 완벽한 자동화를 실현합니다.
             <br />

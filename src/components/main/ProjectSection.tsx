@@ -3,28 +3,24 @@ import React from "react";
 import "../../style/main/project.css";
 import "../../style/main/main.css";
 
-
 import HyndalRotemLogo from "../../assets/logo/hyundai_rotem.png";
 import EunpyeongLogo from "../../assets/logo/eunpyeong.png";
-import HankookLogo from "../../assets/logo/hankook.png";
-import HyndalMobisLogo from "../../assets/logo/hyundal_mobis.png";
-import HyundalWiaLogo from "../../assets/logo/hyundal_wia.png";
-import HyundalLogo from "../../assets/logo/hyundal.png";
+// import HankookLogo from "../../assets/logo/hankook.png";
+// import HyndalMobisLogo from "../../assets/logo/hyundal_mobis.png";
+// import HyundalWiaLogo from "../../assets/logo/hyundal_wia.png";
+// import HyundalLogo from "../../assets/logo/hyundal.png";
 import KnLogo from "../../assets/logo/kn.png";
 import LotteLogo from "../../assets/logo/lotte.png";
-import NamyangNexmoLogo from "../../assets/logo/namyang_nexmo.png";
+// import NamyangNexmoLogo from "../../assets/logo/namyang_nexmo.png";
 import NongshimLogo from "../../assets/logo/nongshim.png";
-import NvhkoreaLogo from "../../assets/logo/nvhkorea.png";
+// import NvhkoreaLogo from "../../assets/logo/nvhkorea.png";
 import SamsungLogo from "../../assets/logo/samsung_logo.png";
 import SkhynixLogo from "../../assets/logo/skhynix.png";
 import YangjuLogo from "../../assets/logo/yangju.png";
 
-
-
 import FadeInSection from "../../animations/ScrollFadeInSection";
 
 import { Quote } from "lucide-react";
-
 
 const projectData = [
   {
@@ -80,22 +76,29 @@ const projectData = [
 const ProjectSection: React.FC = () => {
   return (
     <div id="project" className="ProjectSection">
-      <div className="title_tag flex-center">
-        <Quote size={18} color="white" strokeWidth={2} />
-        <span>Our Clients</span>
-      </div>
-      <h1>실적으로 입증된 역량, 신뢰로 쌓아온 전문성</h1>
-
-      <div className="project_grid">
-        {projectData.map((item, i) => (
-          <div key={i} className="project_card">
-            <img src={item.logo} alt={item.company} className="project_img" />
-            <h3>{item.company}</h3>
-            <p className="project_title">{item.project}</p>
-            <span className="project_desc">{item.desc}</span>
-          </div>
-        ))}
-      </div>
+      <FadeInSection
+        direction="up"
+        duration={800}
+        className="flex-direction-center ProjectSection_text"
+      >
+        <div className="title_tag flex-center">
+          <Quote size={18} color="white" strokeWidth={2} />
+          <span>Our Clients</span>
+        </div>
+        <h1>실적으로 입증된 역량, 신뢰로 쌓아온 전문성</h1>
+      </FadeInSection>
+      <FadeInSection direction="up" duration={800}>
+        <div className="project_grid">
+          {projectData.map((item, i) => (
+            <div key={i} className="project_card">
+              <img src={item.logo} alt={item.company} className="project_img" />
+              <h3>{item.company}</h3>
+              <p className="project_title">{item.project}</p>
+              <span className="project_desc">{item.desc}</span>
+            </div>
+          ))}
+        </div>
+      </FadeInSection>
     </div>
   );
 };
