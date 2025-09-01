@@ -13,7 +13,7 @@
 }
 .FooterSection2 ul{
     /* border: 1px solid white; */
-    width: 400px;
+    width: fit-content;
     color: white;
 }
 .FooterSection2 ul li{
