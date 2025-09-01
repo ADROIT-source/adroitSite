@@ -92,22 +92,22 @@ const HeroSection: React.FC = () => {
               <div className="HeroSection_card_icon flex-center">
                 <Zap size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
-              <AnimatedCounter target={500} suffix="+" fontSize="24px" />
-              <span>설치된 로봇</span>
+              <AnimatedCounter target={20} suffix="+" fontSize="24px" />
+              <span>업계경험</span>
             </li>
             <li>
               <div className="HeroSection_card_icon flex-center">
                 <Shield size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
-              <AnimatedCounter target={80} suffix="%" fontSize="24px" />
-              <span>가동률</span>
+              <AnimatedCounter target={32} suffix="+" fontSize="24px" />
+              <span>완료된 프로젝트</span>
             </li>
             <li>
               <div className="HeroSection_card_icon flex-center">
                 <Cpu size={24} color="#1e5ef3" strokeWidth={2} />
               </div>
-              <AnimatedCounter target={7} suffix="/24" fontSize="24px" />
-              <span>지원 서비스</span>
+              <AnimatedCounter target={9} suffix="+" fontSize="24px" />
+              <span>보유기술</span>
             </li>
           </ul>
           <ul className="HeroSection_tag">

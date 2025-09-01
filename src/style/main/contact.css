@@ -121,7 +121,20 @@
   padding: 10px;
   font-size: 15px;
 }
+.ContactSection_submit textarea::-webkit-scrollbar {
+    width: 6px; /* 스크롤바 너비 */
 
+}
+
+.ContactSection_submit textarea::-webkit-scrollbar-track {
+    background-color: #181818; /* 스크롤바 배경 검정 */
+}
+
+.ContactSection_submit textarea::-webkit-scrollbar-thumb {
+    background-color: #555; /* 스크롤바 막대 색상 (원하는 색으로 변경 가능) */
+    border-radius: 4px; /* 둥글게 만들고 싶으면 */
+    cursor: pointer;
+}
 /* 인풋 그룹 (flex) */
 .contactSection_user_info,
 .user_contact_info {

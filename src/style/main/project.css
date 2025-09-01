@@ -69,3 +69,9 @@ border: 1px solid rgb(100, 100, 100);
   line-height: 1.6;
   opacity: 0.85;
 }
+
+@media (max-width: 1340px) {
+.project_card {
+  margin-top: 10px;
+  }
+}

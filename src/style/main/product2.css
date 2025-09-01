@@ -136,3 +136,41 @@
   color: rgb(120, 120, 120);
   font-size: 14px;
 }
+
+@media (max-width: 1430px) {
+  .product_content{
+    position: relative;
+  }
+  .product_text{
+    position: absolute;
+    border-radius: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 21px;
+  }
+  .product_image{
+    margin: 0;
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 1200px) {
+  .product_menu li.active span {
+    display: none;
+  }
+  .product_menu li:not(.active) span {
+   display: none;
+  }
+  .product_content_wrap{
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .product_menu li p{
+    font-size: 12px;
+  }
+}

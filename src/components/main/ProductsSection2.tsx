@@ -99,8 +99,7 @@ const ProductsSection2: React.FC = () => {
           산업의 미래를 선도하고 글로벌 경쟁력을 강화합니다
         </p>
       </FadeInSection>
-      <FadeInSection direction="up" duration={800}>
-        <div className="product_content_wrap">
+        <FadeInSection direction="up" duration={800} className="product_content_wrap">
           {/* 메인 이미지 + 텍스트 */}
           <div className="product_content">
             <div className="product_image">
@@ -147,8 +146,7 @@ const ProductsSection2: React.FC = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </FadeInSection>
+        </FadeInSection>
     </div>
   );
 };

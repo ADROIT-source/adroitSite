@@ -12,6 +12,7 @@
   height: 100svh;
   min-height: 100svh;
   background-color: #181818;
+  overflow: hidden;
   /* border: 1px solid black; */
 }
 
@@ -19,7 +20,9 @@
   min-height: fit-content;
   background-color: rgb(252, 252, 252)
 }
-
+.ProductsSection2,.ContactSection{
+  min-height: fit-content;
+}
 .Company {
   width: 100%;
   height: 60svh;
@@ -31,6 +34,7 @@
 
 .HistorySection {
   min-height: 280vh;
+  height: fit-content;
 }
 .QuestionSection {
   min-height: 140vh;
