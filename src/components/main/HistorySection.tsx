@@ -114,6 +114,12 @@ const HistorySection: React.FC = () => {
         </p>
       </FadeInSection>
       <div className="history">
+          <div className="History_dotted1"></div>
+          <div className="History_dotted2"></div>
+          <div className="History_dotted3"></div>
+          <div className="History_dotted4"></div>
+          <div className="History_dotted5"></div>
+          <div className="History_dotted6"></div>
         <div className="history_line"></div>
         {historyData.map((yearGroup, index) => (
           <div
@@ -137,7 +143,7 @@ const HistorySection: React.FC = () => {
           </div>
         ))}
       </div>
-      <FadeInSection
+      {/* <FadeInSection
         direction="up"
         duration={800}
         className="HistorySection_footer"
@@ -154,7 +160,7 @@ const HistorySection: React.FC = () => {
           <AnimatedCounter target={20} suffix="+" fontSize="42px" className="HistorySection_footer_couter" />
           <span>직원수</span>
         </li>
-      </FadeInSection>
+      </FadeInSection> */}
     </div>
   );
 };

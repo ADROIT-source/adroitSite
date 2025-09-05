@@ -7,6 +7,9 @@ import "../../style/main/footer2.css";
 import KawasakiLogo from "../../assets/logo/kawasaki.png";
 import InovanceLogo from "../../assets/logo/inovance.png";
 import AbbLogo from "../../assets/logo/abb.png";
+import PinklabLogo from "../../assets/logo/pinklab.png";
+import HiunLogo from "../../assets/logo/hiun.png";
+import MechMindLogo from "../../assets/logo/mech-mind.png";
 
 const FooterSection2: React.FC = () => {
   return (
@@ -21,7 +24,9 @@ const FooterSection2: React.FC = () => {
         <img src={AbbLogo} alt="" />
         <img src={KawasakiLogo} alt="" />
         <img src={InovanceLogo} alt="" />
-
+        <img src={PinklabLogo} alt="" />
+        <img src={HiunLogo} alt="" />
+        <img src={MechMindLogo} alt="" />
       </ul>
     </div>
   );

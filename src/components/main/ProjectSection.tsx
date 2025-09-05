@@ -81,10 +81,7 @@ const ProjectSection: React.FC = () => {
         duration={800}
         className="flex-direction-center ProjectSection_text"
       >
-        <div className="title_tag flex-center">
-          <Quote size={18} color="white" strokeWidth={2} />
-          <span>Our Clients</span>
-        </div>
+        <span>Our Clients</span>
         <h1>실적으로 입증된 역량, 신뢰로 쌓아온 전문성</h1>
       </FadeInSection>
       <FadeInSection direction="up" duration={800}>
@@ -99,6 +96,10 @@ const ProjectSection: React.FC = () => {
           ))}
         </div>
       </FadeInSection>
+
+      {/* <div className="Project_dotted1"></div>
+      <div className="Project_dotted2"></div>
+      <div className="Project_dotted3"></div> */}
     </div>
   );
 };

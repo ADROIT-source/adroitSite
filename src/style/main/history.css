@@ -1,5 +1,5 @@
 .HistorySection {
-  padding: 100px 180px 20px 180px;
+  padding: 90px 180px 20px 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -63,8 +63,9 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 20px 45px;
-  border: 1px solid rgb(100, 100, 100);
+  border: 1px solid rgb(55, 55, 54);
   background: transparent;
+  background-color: rgba(24, 24, 24, 0.808);
 }
 
 .history_card h3 {
@@ -130,6 +131,90 @@
 .HistorySection_footer li:nth-child(2) {
   margin: 0px 30px;
 }
+
+.History_dotted1,
+.History_dotted2,
+.History_dotted3,
+.History_dotted4,
+.History_dotted5,
+.History_dotted6 {
+  position: absolute;
+  border-radius: 50%;
+}
+
+
+.History_dotted1 {
+  width: 400px;
+  height: 400px;
+  background-color: rgba(0, 48, 204, 0.3);
+  bottom: 10%;
+  left: 20%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.History_dotted2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 48, 204, 0.6);
+  bottom: 10%;
+  right: 20%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.History_dotted3 {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(0, 48, 204, 0.6);
+  bottom: 45%;
+  right: 20%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.History_dotted4 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 48, 204, 0.4);
+  bottom: 55%;
+  left: 2%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.History_dotted5 {
+    width: 400px;
+  height: 400px;
+  background-color: rgba(0, 48, 204, 0.2);
+  bottom: 70%;
+  right: 2%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.History_dotted6 {
+    width: 50px;
+  height: 50px;
+  background-color: rgba(0, 48, 204, 0.8);
+  bottom: 90%;
+  left: 35%;
+  animation: pulse 7s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 1340px) {
       .HistorySection {
       padding: 60px 180px 20px 180px;

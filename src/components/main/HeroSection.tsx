@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
 
-          <ul className="HeroSection_card">
+          {/* <ul className="HeroSection_card">
             <li>
               <div className="HeroSection_card_icon flex-center">
                 <Zap size={24} color="#1e5ef3" strokeWidth={2} />
@@ -108,8 +108,8 @@ const HeroSection: React.FC = () => {
               <AnimatedCounter target={9} suffix="+" fontSize="24px" />
               <span>보유기술</span>
             </li>
-          </ul>
-          <ul className="HeroSection_tag">
+          </ul> */}
+          {/* <ul className="HeroSection_tag">
             <li className="flex-center">
               <div className="circle"></div>
               <span>기술 전문성</span>
@@ -122,7 +122,7 @@ const HeroSection: React.FC = () => {
               <div className="circle"></div>
               <span>혁신</span>
             </li>
-          </ul>
+          </ul> */}
         </FadeInSection>
       </div>
       <div className="HeroSection_image_wrap">

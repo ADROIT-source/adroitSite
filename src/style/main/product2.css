@@ -1,5 +1,5 @@
 .ProductsSection2 {
-  padding: 10px 50px 20px 50px;
+  padding: 90px 50px 80px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,12 +7,13 @@
 }
 .ProductsSection2_text h1 {
   color: white;
-  font-size: 42px;
+  font-size: clamp(21px, 2.5vw, 40px);
   margin: 15px 0px;
 }
 .ProductsSection2_text p {
   color: white;
   text-align: center;
+  font-size: clamp(13px, 1.2vw, 18px);
 }
 .product_content_wrap {
   width: fit-content;
@@ -117,6 +118,7 @@
 .product_menu li p,
 .product_menu li span {
   transition: color 0.4s ease, opacity 0.4s ease; 
+  text-align: center;
 }
 
 .product_menu li.active p {
@@ -172,5 +174,10 @@
 @media (max-width: 800px) {
   .product_menu li p{
     font-size: 12px;
+  }
+}
+@media (max-width: 700px) {
+  .ProductsSection2 {
+  padding: 90px 10px 80px 10px;
   }
 }

@@ -99,7 +99,7 @@ const Bar: React.FC = () => {
           >
             Contact
           </li>
-          <a href="/saladybot">Salad Bot</a>
+          <a href="/saladybot">Salady Bot</a>
         </ul>
 
         {/* 토글 메뉴 */}
