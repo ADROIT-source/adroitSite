@@ -21,7 +21,7 @@ const AboutSection: React.FC = () => {
             <Shell size={18} color="white" strokeWidth={2} />
             <span>회사소개</span>
           </div>
-          <h1>로봇과 자동화 기술로</h1>
+          <h1>로봇과 인공지능 기술로</h1>
           <h1>산업의 미래를 혁신합니다</h1>
           <p>
             최고의 기술력과 신뢰를 바탕으로

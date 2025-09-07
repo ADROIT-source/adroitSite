@@ -65,6 +65,7 @@
   transform-origin: left;
   transition: transform 0.3s ease;
 }
+
 .bar_menu li.active::after,
 .bar_menu a.active::after {
   transform: scaleX(1);

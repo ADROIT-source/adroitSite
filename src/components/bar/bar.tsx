@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../../style/bar/bar.css";
 import { MoveRight, AlignJustify, AlignLeft } from "lucide-react";
 import LogoImage from "../../assets/images/logo1.png";
@@ -9,9 +10,8 @@ const allSections = [
   "about",
   "product2",
   "project",
-  // "testimonials",
-  "history",
   "question",
+  "history",
   "contact",
 ];
 const menuSections = ["hero", "about", "product2", "history", "contact"];
@@ -21,11 +21,26 @@ const Bar: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string>("hero");
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
-      let current = "hero";
 
+      // saladybot 페이지라면 activeSection을 saladybot으로 고정
+      if (location.pathname === "/saladybot") {
+        setActiveSection("saladybot");
+        return;
+      }
+
+      // 새로고침 직후 맨 위에 있으면 hero 고정
+      if (window.scrollY === 0) {
+        setActiveSection("hero");
+        return;
+      }
+
+      let current = "hero";
       for (let i = 0; i < allSections.length; i++) {
         const id = allSections[i];
         const section = document.getElementById(id);
@@ -49,11 +64,22 @@ const Bar: React.FC = () => {
       setActiveSection(current);
     };
 
+    // 실행 즉시 초기화
+    handleScroll();
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location.pathname]);
 
+  // 특정 섹션으로 이동
   const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== "/") {
+      // 메인 페이지로 이동하면서 target 섹션을 state로 전달
+      navigate("/", { state: { target: sectionId } });
+      setMenuOpen(false);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -63,9 +89,9 @@ const Bar: React.FC = () => {
 
   return (
     <div className={`Bar ${scrolled ? "shadow" : ""}`}>
-      <div className="logo flex-center">
+      <a href="/" className="logo flex-center">
         <img src={LogoImage} alt="로고 이미지" />
-      </div>
+      </a>
 
       <div className="bar_menu_wrap flex-center">
         <ul className="bar_menu">
@@ -99,7 +125,15 @@ const Bar: React.FC = () => {
           >
             Contact
           </li>
-          <a href="/saladybot">Salady Bot</a>
+          <li
+            className={activeSection === "saladybot" ? "active" : ""}
+            onClick={() => {
+              navigate("/saladybot");
+              setMenuOpen(false);
+            }}
+          >
+            Salady Bot
+          </li>
         </ul>
 
         {/* 토글 메뉴 */}
@@ -109,7 +143,20 @@ const Bar: React.FC = () => {
           <li onClick={() => scrollToSection("product2")}>Product</li>
           <li onClick={() => scrollToSection("history")}>History</li>
           <li onClick={() => scrollToSection("contact")}>Contact</li>
-          <a href="/saladybot">Salad Bot</a>
+          <li
+            className={activeSection === "saladybot" ? "active" : ""}
+            onClick={() => {
+              navigate("/saladybot");
+              setMenuOpen(false);
+              setTimeout(() => {
+                const element = document.getElementById("top"); // SaladyBot 페이지 최상단 id
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }, 100); // 렌더링 후 스크롤
+            }}
+          >
+            Salady Bot
+          </li>
+
           <button
             className="toggle_contact_us_button"
             onClick={() => scrollToSection("contact")}
@@ -129,10 +176,7 @@ const Bar: React.FC = () => {
       </button>
 
       {/* 햄버거 버튼 */}
-      <div
-        className="toggle_menu_wrap"
-        onClick={() => setMenuOpen(!menuOpen)}
-      >
+      <div className="toggle_menu_wrap" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? (
           <AlignLeft
             color="white"

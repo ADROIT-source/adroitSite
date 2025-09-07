@@ -22,78 +22,63 @@ const historyData: YearGroup[] = [
       { title: "프로젝트", desc: "기아자동차 광주 SP2 PJT" },
       { title: "프로젝트", desc: "기아자동차 광주 SK3 PJT" },
       { title: "프로젝트", desc: "기아자동차 광주 노후 로봇 교체 PJT" },
-      { title: "프로젝트", desc: "기아 자동차 광주 NQ5 PJT" },
-      {
-        title: "프로젝트",
-        desc: "현대 자동차 울산 공장 실링 ISRA 비전 로봇 PJT",
-      },
-      {
-        title: "프로젝트",
-        desc: "(주) 하이닉스 Probe 핸들링 AMR _+ 협동 로봇 PJT",
-      },
-      {
-        title: "프로젝트",
-        desc: "(주) AMKOR 카세트 핸들링 AMR + 협동 로봇 PJT",
-      },
-      { title: "프로젝트", desc: "(주) 삼성전자카세트핸들링AMR+ 협동로봇PJT" },
-      { title: "프로젝트", desc: "(주) SPC 롤케익핸들링로봇PJT" },
-      { title: "프로젝트", desc: "(주) SPC 오븐 핸들링로봇PJT" },
+      { title: "프로젝트", desc: "기아자동차 광주 NQ5 PJT" },
+      { title: "프로젝트", desc: "현대자동차 울산 공장 실링 ISRA 비전 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) 하이닉스 Probe 핸들링 AMR + 협동 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) AMKOR 카세트 핸들링 AMR + 협동 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) 삼성전자 카세트 핸들링 AMR + 협동 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) SPC 롤케익 핸들링 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) SPC 오븐 핸들링 로봇 PJT" },
     ],
   },
   {
     year: "2021",
     projects: [
-      { title: "프로젝트", desc: "흥진기업웜라인로봇PJT ( DN8 )" },
-      { title: "프로젝트", desc: "남양공업Shaft Line 로봇 PJT" },
-      { title: "프로젝트", desc: "(주)심텍PCB 핸들링로봇PJT" },
-      { title: "프로젝트", desc: "서울시도봉구재활용분류로봇PJT" },
+      { title: "프로젝트", desc: "흥진기업 웜라인 로봇 PJT (DN8)" },
+      { title: "프로젝트", desc: "남양공업 Shaft Line 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) 심텍 PCB 핸들링 로봇 PJT" },
+      { title: "프로젝트", desc: "서울시 도봉구 재활용 분류 로봇 PJT" },
     ],
   },
   {
     year: "2022",
     projects: [
-      { title: "프로젝트", desc: "현대자동시울산공장실링라인PJT" },
-      {
-        title: "프로젝트",
-        desc: "남양공업Disk Line Depalletizing 로봇 PJT ( DN8 외 )",
-      },
-      { title: "프로젝트", desc: "(주) 농심 안성- 팔렛타이징로봇PJT" },
-      { title: "프로젝트", desc: "(주) 젠코 인케이싱및디팔렛타이징PJT" },
-      { title: "프로젝트", desc: "(주) 롯데홈쇼핑디팔렛타이징로봇PJT" },
+      { title: "프로젝트", desc: "현대자동차 울산 공장 실링 라인 PJT" },
+      { title: "프로젝트", desc: "남양공업 Disk Line Depalletizing 로봇 PJT (DN8 외)" },
+      { title: "프로젝트", desc: "(주) 농심 안성 팔렛타이징 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) 젠코 인케이싱 및 디팔렛타이징 PJT" },
+      { title: "프로젝트", desc: "(주) 롯데홈쇼핑 디팔렛타이징 로봇 PJT" },
     ],
   },
   {
     year: "2023",
     projects: [
-      { title: "프로젝트", desc: "대진하이텍Shaft Line 로봇 PJT ( MQ4" },
-      { title: "프로젝트", desc: "현대/기아연구소실링로봇PJT" },
-      {
-        title: "프로젝트",
-        desc: "남양공업Disk Line Depalletizing 로봇 PJT ( CN7 외 )",
-      },
-      { title: "프로젝트", desc: "양주시재활용분류로봇PJT" },
-      { title: "프로젝트", desc: "서울시은평구재활용분류다관절로봇PJT" },
+      { title: "프로젝트", desc: "대진하이텍 Shaft Line 로봇 PJT (MQ4)" },
+      { title: "프로젝트", desc: "현대 / 기아 연구소 실링 로봇 PJT" },
+      { title: "프로젝트", desc: "남양공업 Disk Line Depalletizing 로봇 PJT (CN7 외)" },
+      { title: "프로젝트", desc: "양주시 재활용 분류 로봇 PJT" },
+      { title: "프로젝트", desc: "서울시 은평구 재활용 분류 다관절 로봇 PJT" },
     ],
   },
   {
     year: "2024",
     projects: [
-      { title: "프로젝트", desc: "현대자동차울산공장PickIt3D 로봇PJT" },
-      {
-        title: "프로젝트",
-        desc: "현대자동차울산공장Creaform 3D 로봇 PJT ( RG3 PE )",
-      },
-      { title: "프로젝트", desc: "기아자동차광주공장로봇교체PJT ( NQ5 PE )" },
-      { title: "프로젝트", desc: "(주)농심 안양- 팔렛타이징로봇PJT" },
-      { title: "프로젝트", desc: "서울시은평구재활용분류다관절로봇PJT" },
-      {
-        title: "프로젝트",
-        desc: "(주) 어니스트협동로봇핸들링라인( 두산로봇) PJT",
-      },
-      { title: "프로젝트", desc: "(주) 서울시은평구재활용분류로봇PJT" },
+      { title: "프로젝트", desc: "현대자동차 울산 공장 PickIt3D 로봇 PJT" },
+      { title: "프로젝트", desc: "현대자동차 울산 공장 Creaform 3D 로봇 PJT (RG3 PE)" },
+      { title: "프로젝트", desc: "기아자동차 광주 공장 로봇 교체 PJT (NQ5 PE)" },
+      { title: "프로젝트", desc: "(주) 농심 안양 팔렛타이징 로봇 PJT" },
+      { title: "프로젝트", desc: "서울시 은평구 재활용 분류 다관절 로봇 PJT" },
+      { title: "프로젝트", desc: "(주) 어니스트 협동로봇 핸들링 라인 (두산로봇) PJT" },
+    ],
+  },
+  {
+    year: "2025",
+    projects: [
+      { title: "프로젝트", desc: "추가 필요" },
     ],
   },
 ];
+
 
 const HistorySection: React.FC = () => {
   return (
@@ -135,6 +120,7 @@ const HistorySection: React.FC = () => {
                   {yearGroup.projects.map((item, projIndex) => (
                     <li key={projIndex} className="project_item">
                       {item.desc}
+                      {/* <span>테스트</span> */}
                     </li>
                   ))}
                 </ul>
