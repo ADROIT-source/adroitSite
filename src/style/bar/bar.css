@@ -6,7 +6,7 @@
     box-shadow 0.3s ease;
   position: fixed;
   top: 0;
-  z-index: 998;
+  z-index: 997;
   display: flex;
   align-items: center;
   justify-content: space-between;

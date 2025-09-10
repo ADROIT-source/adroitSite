@@ -23,10 +23,22 @@ const historyData: YearGroup[] = [
       { title: "프로젝트", desc: "기아자동차 광주 SK3 PJT" },
       { title: "프로젝트", desc: "기아자동차 광주 노후 로봇 교체 PJT" },
       { title: "프로젝트", desc: "기아자동차 광주 NQ5 PJT" },
-      { title: "프로젝트", desc: "현대자동차 울산 공장 실링 ISRA 비전 로봇 PJT" },
-      { title: "프로젝트", desc: "(주) 하이닉스 Probe 핸들링 AMR + 협동 로봇 PJT" },
-      { title: "프로젝트", desc: "(주) AMKOR 카세트 핸들링 AMR + 협동 로봇 PJT" },
-      { title: "프로젝트", desc: "(주) 삼성전자 카세트 핸들링 AMR + 협동 로봇 PJT" },
+      {
+        title: "프로젝트",
+        desc: "현대자동차 울산 공장 실링 ISRA 비전 로봇 PJT",
+      },
+      {
+        title: "프로젝트",
+        desc: "(주) 하이닉스 Probe 핸들링 AMR + 협동 로봇 PJT",
+      },
+      {
+        title: "프로젝트",
+        desc: "(주) AMKOR 카세트 핸들링 AMR + 협동 로봇 PJT",
+      },
+      {
+        title: "프로젝트",
+        desc: "(주) 삼성전자 카세트 핸들링 AMR + 협동 로봇 PJT",
+      },
       { title: "프로젝트", desc: "(주) SPC 롤케익 핸들링 로봇 PJT" },
       { title: "프로젝트", desc: "(주) SPC 오븐 핸들링 로봇 PJT" },
     ],
@@ -44,7 +56,10 @@ const historyData: YearGroup[] = [
     year: "2022",
     projects: [
       { title: "프로젝트", desc: "현대자동차 울산 공장 실링 라인 PJT" },
-      { title: "프로젝트", desc: "남양공업 Disk Line Depalletizing 로봇 PJT (DN8 외)" },
+      {
+        title: "프로젝트",
+        desc: "남양공업 Disk Line Depalletizing 로봇 PJT (DN8 외)",
+      },
       { title: "프로젝트", desc: "(주) 농심 안성 팔렛타이징 로봇 PJT" },
       { title: "프로젝트", desc: "(주) 젠코 인케이싱 및 디팔렛타이징 PJT" },
       { title: "프로젝트", desc: "(주) 롯데홈쇼핑 디팔렛타이징 로봇 PJT" },
@@ -55,7 +70,10 @@ const historyData: YearGroup[] = [
     projects: [
       { title: "프로젝트", desc: "대진하이텍 Shaft Line 로봇 PJT (MQ4)" },
       { title: "프로젝트", desc: "현대 / 기아 연구소 실링 로봇 PJT" },
-      { title: "프로젝트", desc: "남양공업 Disk Line Depalletizing 로봇 PJT (CN7 외)" },
+      {
+        title: "프로젝트",
+        desc: "남양공업 Disk Line Depalletizing 로봇 PJT (CN7 외)",
+      },
       { title: "프로젝트", desc: "양주시 재활용 분류 로봇 PJT" },
       { title: "프로젝트", desc: "서울시 은평구 재활용 분류 다관절 로봇 PJT" },
     ],
@@ -64,21 +82,40 @@ const historyData: YearGroup[] = [
     year: "2024",
     projects: [
       { title: "프로젝트", desc: "현대자동차 울산 공장 PickIt3D 로봇 PJT" },
-      { title: "프로젝트", desc: "현대자동차 울산 공장 Creaform 3D 로봇 PJT (RG3 PE)" },
-      { title: "프로젝트", desc: "기아자동차 광주 공장 로봇 교체 PJT (NQ5 PE)" },
+      {
+        title: "프로젝트",
+        desc: "현대자동차 울산 공장 Creaform 3D 로봇 PJT (RG3 PE)",
+      },
+      {
+        title: "프로젝트",
+        desc: "기아자동차 광주 공장 로봇 교체 PJT (NQ5 PE)",
+      },
       { title: "프로젝트", desc: "(주) 농심 안양 팔렛타이징 로봇 PJT" },
       { title: "프로젝트", desc: "서울시 은평구 재활용 분류 다관절 로봇 PJT" },
-      { title: "프로젝트", desc: "(주) 어니스트 협동로봇 핸들링 라인 (두산로봇) PJT" },
+      {
+        title: "프로젝트",
+        desc: "(주) 어니스트 협동로봇 핸들링 라인 (두산로봇) PJT",
+      },
     ],
   },
   {
     year: "2025",
     projects: [
-      { title: "프로젝트", desc: "추가 필요" },
+      { title: "프로젝트", desc: "철도궤도프레임(철도청) 쇼트 로봇 자동화 PJ" },
+      { title: "프로젝트", desc: "농심(주) 인케이싱 라인 로봇 자동화 PJ" },
+      {
+        title: "프로젝트",
+        desc: "기아자동차(광주) 플러그 라인 로봇 프로그램 PJ",
+      },
+      { title: "프로젝트", desc: "현대자동차(전주) 비전 시스템 PJ" },
+      { title: "프로젝트", desc: "롯데홈쇼핑 디팔렛타이징 로봇 자동화 PJ" },
+      {
+        title: "프로젝트",
+        desc: "기아자동차(광주) 붓터치 라인 로봇 프로그램 PJ",
+      },
     ],
   },
 ];
-
 
 const HistorySection: React.FC = () => {
   return (
@@ -99,12 +136,12 @@ const HistorySection: React.FC = () => {
         </p>
       </FadeInSection>
       <div className="history">
-          <div className="History_dotted1"></div>
-          <div className="History_dotted2"></div>
-          <div className="History_dotted3"></div>
-          <div className="History_dotted4"></div>
-          <div className="History_dotted5"></div>
-          <div className="History_dotted6"></div>
+        <div className="History_dotted1"></div>
+        <div className="History_dotted2"></div>
+        <div className="History_dotted3"></div>
+        <div className="History_dotted4"></div>
+        <div className="History_dotted5"></div>
+        <div className="History_dotted6"></div>
         <div className="history_line"></div>
         {historyData.map((yearGroup, index) => (
           <div
@@ -113,7 +150,11 @@ const HistorySection: React.FC = () => {
               index % 2 === 0 ? "left" : "right"
             }`}
           >
-            <FadeInSection direction="up" duration={800} className="HistorySection_card_wrap">
+            <FadeInSection
+              direction="up"
+              duration={800}
+              className="HistorySection_card_wrap"
+            >
               <div className="history_card">
                 <h3>{yearGroup.year}</h3>
                 <ul>

@@ -480,9 +480,9 @@ const SaladyBot: React.FC = () => {
                         </div>
                     </div>
                     <div className="card">
-                        <div className="img-box" onClick={() => openImagePopup(ResultMainImage)} aria-label="데모 다이어그램 이미지 자리">
+                        {/* <div className="img-box" onClick={() => openImagePopup(ResultMainImage)} aria-label="데모 다이어그램 이미지 자리">
                             <img src={ResultMainImage} alt="데모 흐름 다이어그램" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

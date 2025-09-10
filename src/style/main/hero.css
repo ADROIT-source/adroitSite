@@ -12,7 +12,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 4 ;
+  z-index: 9998 ;
   transition: opacity 0.3s ease;
 }
 
@@ -29,6 +29,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9999;
 }
 
 .HeroSection_popUp.open {
@@ -181,7 +182,8 @@
 }
 
 .HeroSection_image_wrap {
-  height: 80vh;
+  max-height: 750px;
+  min-height: 750px;
   min-width: 850px;
   max-width: 850px;
   position: relative;
