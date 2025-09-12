@@ -41,7 +41,7 @@ const Main: React.FC = () => {
       <ProjectSection />
       <QuestionSection />
       <HistorySection />
-      <ContactSection />
+      {/* <ContactSection /> */}
       <FooterSection2 />
     </div>
   );

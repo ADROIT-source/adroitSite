@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+
+import SaladyBotMainImage from '../assets/images/saladybot_main_image.png'
+import DemoImage from '../assets/images/demo_image.png'
 import ResultImage1 from '../assets/images/result_image1.png'
 import ResultImage2 from '../assets/images/result_image2.png'
 import ResultImage3 from '../assets/images/result_image3.jpg'
@@ -291,9 +294,9 @@ const SaladyBot: React.FC = () => {
                             </a>
                         </div>
                     </div>
-                    {/* <div className="img-box" onClick={() => openImagePopup(ResultMainImage)} aria-label="히어로 이미지 자리">
-                        <img src={ResultMainImage} alt="샐러디봇 제조 장면" />
-                    </div> */}
+                    <div className="img-box" onClick={() => openImagePopup(SaladyBotMainImage)} aria-label="히어로 이미지 자리">
+                        <img src={SaladyBotMainImage} alt="샐러디봇 제조 장면" />
+                    </div>
                 </div>
             </section>
             {/* 문제 & 솔루션 */}
@@ -480,9 +483,9 @@ const SaladyBot: React.FC = () => {
                         </div>
                     </div>
                     <div className="card">
-                        {/* <div className="img-box" onClick={() => openImagePopup(ResultMainImage)} aria-label="데모 다이어그램 이미지 자리">
-                            <img src={ResultMainImage} alt="데모 흐름 다이어그램" />
-                        </div> */}
+                        <div className="img-box" onClick={() => openImagePopup(DemoImage)} aria-label="데모 다이어그램 이미지 자리">
+                            <img src={DemoImage} alt="데모 흐름 다이어그램" />
+                        </div>
                     </div>
                 </div>
             </section>

@@ -13,7 +13,7 @@ import MechMindLogo from "../../assets/logo/mech-mind.png";
 
 const FooterSection2: React.FC = () => {
   return (
-    <div className="FooterSection2">
+    <div className="FooterSection2" id="contact">
       <h1>Partner with us</h1>
       <ul>
           <li>T. +82-70-8810-5612</li>

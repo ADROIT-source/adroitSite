@@ -14,7 +14,7 @@ const allSections = [
   "history",
   "contact",
 ];
-const menuSections = ["hero", "about", "product2", "history", "contact"];
+const menuSections = ["hero", "about", "product2", "history"];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -119,12 +119,12 @@ const Bar: React.FC = () => {
           >
             History
           </li>
-          <li
+          {/* <li
             className={activeSection === "contact" ? "active" : ""}
             onClick={() => scrollToSection("contact")}
           >
             Contact
-          </li>
+          </li> */}
           <li
             className={activeSection === "saladybot" ? "active" : ""}
             onClick={() => {
