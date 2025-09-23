@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import SaladyBotMainImage from '../assets/images/saladybot_main_image.png'
 import DemoImage from '../assets/images/demo_image.png'
@@ -12,16 +12,67 @@ import TechnologyMainImage from '../assets/images/technology_main_image.png'
 import TechnologyImage2 from '../assets/images/technologyImage2.png'
 import TechnologyImage3 from '../assets/images/technologyImage3.png'
 
+import SaladybotVideo from '../assets/video/saladybot.mp4'
+
 import Bar from "../components/bar/bar";
 
 import '../style/bar/bar.css'
 
 const SaladyBot: React.FC = () => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
+    const videoRef = useRef<HTMLVideoElement | null>(null);
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    // 영역시 자동 실행
+    //     useEffect(() => {
+    //     const videoEl = videoRef.current;
+    //     if (!videoEl) return;
+
+    //     const observer = new IntersectionObserver(
+    //         (entries) => {
+    //             entries.forEach((entry) => {
+    //                 if (entry.isIntersecting) {
+    //                     videoEl.play();
+    //                 } else {
+    //                     videoEl.pause();
+    //                 }
+    //             });
+    //         },
+    //         { threshold: 0.5 } // 50% 이상 보여야 동작
+    //     );
+
+    //     observer.observe(videoEl);
+
+    //     return () => {
+    //         observer.disconnect();
+    //     };
+    // }, []);
+
+    useEffect(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting && !videoEl.paused) {
+                    // ✅ 재생 중인데 화면에서 벗어나면 자동 멈춤
+                    videoEl.pause();
+                }
+            });
+        },
+        { threshold: 0.5 }
+    );
+
+    observer.observe(videoEl);
+
+    return () => {
+        observer.disconnect();
+    };
+}, []);
+
 
     const openImagePopup = (imageSrc: string) => {
         setSelectedImage(imageSrc);
@@ -251,6 +302,15 @@ const SaladyBot: React.FC = () => {
                     font-size: 14px;
                     margin: 15px 0px;
                 }
+                #salady_bot_video_wrap{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                #salady_bot_video_wrap video{
+                     width: clamp(350px, 95vw, 1200px);
+                      border-radius: 7px;
+                } 
                 .footer {
                     border-top: 1px solid var(--line);
                     margin-top: 56px;
@@ -258,6 +318,7 @@ const SaladyBot: React.FC = () => {
                     color: var(--muted);
                     font-size: 14px;
                 }
+                
                 @media (max-width: 980px) {
                     .hero {
                         grid-template-columns: 1fr;
@@ -342,6 +403,14 @@ const SaladyBot: React.FC = () => {
                 </div>
             </section>
             {/* 핵심 기술 */}
+            <section className="container" id="salady_bot_video_wrap">
+                <video
+                    ref={videoRef}
+                    src={SaladybotVideo}
+                    playsInline
+                    controls
+                />
+            </section>
             <section className="container" id="features">
                 <h2>샐러디봇의 핵심 기술</h2>
                 <div className="grid cols-3" style={{ marginTop: 8 }}>
