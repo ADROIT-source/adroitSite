@@ -1,0 +1,30 @@
+.SaladybotvideoSection {
+  padding: 100px 50px 150px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#salady_bot_video_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#salady_bot_video_wrap video {
+
+  width: clamp(300px, 95vw, 1100px);
+  border-radius: 7px;
+}
+.saladybotvideo_title {
+  font-size: clamp(18px,7vw,48px);
+  margin-bottom: 60px;
+  color: white;
+}
+
+@media (max-width: 700px) {
+  .SaladybotvideoSection {
+    padding: 100px 10px 150px 10px;
+  }
+}

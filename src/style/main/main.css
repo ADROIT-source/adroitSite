@@ -7,13 +7,17 @@
 .ContactSection,
 .QuestionSection,
 .FooterSection,
-.ProjectSection {
+.ProjectSection,
+.SaladybotvideoSection {
   width: 100%;
   /* height: 100svh; */
   min-height: 100svh;
   background-color: #181818;
   overflow: hidden;
   /* border: 1px solid black; */
+}
+.SaladybotvideoSection{
+  min-height: fit-content;
 }
 .HeroSection{
   height: fit-content;
