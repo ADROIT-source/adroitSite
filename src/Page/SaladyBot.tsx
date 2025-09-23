@@ -306,11 +306,16 @@ const SaladyBot: React.FC = () => {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                      flex-direction: column;
                 }
                 #salady_bot_video_wrap video{
-                     width: clamp(350px, 95vw, 1200px);
+                     width: clamp(300px, 95vw, 1200px);
                       border-radius: 7px;
-                } 
+                }
+                #salady_bot_video_wrap > h1{
+                    font-size: clamp(21px, 10vw, 42px);
+                    margin-bottom : 40px;
+                }
                 .footer {
                     border-top: 1px solid var(--line);
                     margin-top: 56px;
@@ -404,6 +409,7 @@ const SaladyBot: React.FC = () => {
             </section>
             {/* 핵심 기술 */}
             <section className="container" id="salady_bot_video_wrap">
+                <h1>소개 영상</h1>
                 <video
                     ref={videoRef}
                     src={SaladybotVideo}
