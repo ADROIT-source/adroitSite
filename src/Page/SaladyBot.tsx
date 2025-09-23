@@ -26,29 +26,28 @@ const SaladyBot: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-    useEffect(() => {
-      const videoEl = videoRef.current;
-      if (!videoEl) return;
-  
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting && !videoEl.paused) {
-              // ✅ 재생 중인데 화면에서 벗어나면 자동 멈춤
-              videoEl.pause();
-            }
-          });
-        },
-        { threshold: 0.5 }
-      );
-  
-      observer.observe(videoEl);
-  
-      return () => {
-        observer.disconnect();
-      };
-    }, []);
+  useEffect(() => {
+    const videoEl = videoRef.current;
+    if (!videoEl) return;
 
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting && !videoEl.paused) {
+            // ✅ 재생 중인데 화면에서 벗어나면 자동 멈춤
+            videoEl.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(videoEl);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   // 영역시 자동 실행
   //     useEffect(() => {
@@ -101,6 +100,12 @@ const SaladyBot: React.FC = () => {
                 }
                 * {
                     box-sizing: border-box;
+                }
+                .salady_bot_video_text{
+                    font-size: clamp(18px, 7vw, 48px);
+                    text-align: center;
+                    margin-bottom:60px ;
+                      
                 }
                 html,
                 body {
@@ -316,18 +321,14 @@ const SaladyBot: React.FC = () => {
                     justify-content: center;
                       flex-direction: column;
                 }
-                #salady_bot_video_wrap video{
-                     width: clamp(350px, 95vw, 1200px);
-                     width: clamp(300px, 95vw, 1200px);
-                      border-radius: 7px;
-                                          margin-top : 60px;
-                } 
-                }
-                #salady_bot_video_wrap  h2{
-                    font-size: clamp(21px, 10vw, 48px);
-
-                }
-                
+                  #salady_bot_video_wrap video {
+                    width: clamp(300px, 95vw, 1200px);
+                    max-width: 100%;
+                    height: auto;              /* 원본 비율 유지 */
+                    aspect-ratio: 16 / 9;      /* 종횡비 강제 (필요 시) */
+                    border-radius: 7px;
+                    display: block;
+                  }
                 @media (max-width: 980px) {
                     .hero {
                         grid-template-columns: 1fr;
@@ -421,16 +422,16 @@ const SaladyBot: React.FC = () => {
           </div>
         </div>
       </section>
-                    <section className="container" id="salady_bot_video_wrap">
-                      <h2>Introducing SaladyBot</h2>
-                <video
-                    ref={videoRef}
-                    src={SaladybotVideo}
-                    muted
-                    playsInline
-                    controls={true} // 필요시 true로
-                />
-            </section>
+      <section className="container" id="salady_bot_video_wrap">
+        <h1 className="salady_bot_video_text">Introducing SaladyBot</h1>
+        <video
+          ref={videoRef}
+          src={SaladybotVideo}
+          muted
+          playsInline
+          controls={true} // 필요시 true로
+        />
+      </section>
       {/* 핵심 기술 */}
       <section className="container" id="features">
         <h2>샐러디봇의 핵심 기술</h2>

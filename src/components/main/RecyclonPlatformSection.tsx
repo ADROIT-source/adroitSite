@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "../../style/main/saladybotvideo.css";
+import "../../style/main/recyclonplatform.css";
 import FadeInSection from "../../animations/ScrollFadeInSection";
 
 import SaladybotVideo from "../../assets/video/recyclon_platform.mp4";
@@ -33,20 +33,20 @@ useEffect(() => {
     }, []);
 
   return (
-    <div id="saladybotvideo" className="SaladybotvideoSection">
+    <div id="recyclonplat" className="RecyclonPlatformSection">
       <FadeInSection
         direction="up"
         duration={800}
-        className="flex-direction-center SaladybotvideoSection_text"
+        className="flex-direction-center RecyclonPlatformSection_text"
       >
         <div className="title_tag flex-center">
           <Recycle size={18} color="white" strokeWidth={2} />
           <span>기술 시연 영상</span>
         </div>
-        <h1 className="saladybotvideo_title">Recyclon platform</h1>
+        <h1 className="recyclonplat_title">Recyclon platform</h1>
       </FadeInSection>
       <FadeInSection direction="up" duration={800}>
-        <div className="container" id="salady_bot_video_wrap">
+        <div className="container" id="recyclonplat_video_wrap">
                 <video
                     ref={videoRef}
                     src={SaladybotVideo}

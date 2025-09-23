@@ -1,4 +1,4 @@
-.SaladybotvideoSection {
+.RecyclonPlatformSection {
   padding: 100px 50px 150px 50px;
   display: flex;
   align-items: center;
@@ -6,25 +6,29 @@
   flex-direction: column;
 }
 
-#salady_bot_video_wrap {
+#recyclonplat_video_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-#salady_bot_video_wrap video {
-
+#recyclonplat_video_wrap video {
+  height: auto;
   width: clamp(300px, 95vw, 1100px);
   border-radius: 7px;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+ display: block;
+
 }
-.saladybotvideo_title {
+.recyclonplat_title {
   font-size: clamp(18px,7vw,48px);
   margin-bottom: 60px;
   color: white;
 }
 
 @media (max-width: 700px) {
-  .SaladybotvideoSection {
+  .RecyclonPlatformSection {
     padding: 100px 10px 150px 10px;
   }
 }
