@@ -20,10 +20,35 @@ import "../style/bar/bar.css";
 
 const SaladyBot: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+    useEffect(() => {
+      const videoEl = videoRef.current;
+      if (!videoEl) return;
+  
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting && !videoEl.paused) {
+              // ✅ 재생 중인데 화면에서 벗어나면 자동 멈춤
+              videoEl.pause();
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+  
+      observer.observe(videoEl);
+  
+      return () => {
+        observer.disconnect();
+      };
+    }, []);
+
 
   // 영역시 자동 실행
   //     useEffect(() => {
@@ -285,6 +310,23 @@ const SaladyBot: React.FC = () => {
                     color: var(--muted);
                     font-size: 14px;
                 }
+                    #salady_bot_video_wrap{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                      flex-direction: column;
+                }
+                #salady_bot_video_wrap video{
+                     width: clamp(350px, 95vw, 1200px);
+                     width: clamp(300px, 95vw, 1200px);
+                      border-radius: 7px;
+                                          margin-top : 60px;
+                } 
+                }
+                #salady_bot_video_wrap  h2{
+                    font-size: clamp(21px, 10vw, 48px);
+
+                }
                 
                 @media (max-width: 980px) {
                     .hero {
@@ -336,6 +378,7 @@ const SaladyBot: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* 문제 & 솔루션 */}
       <section className="container" id="problem">
         <div className="grid cols-2">
@@ -378,6 +421,16 @@ const SaladyBot: React.FC = () => {
           </div>
         </div>
       </section>
+                    <section className="container" id="salady_bot_video_wrap">
+                      <h2>Introducing SaladyBot</h2>
+                <video
+                    ref={videoRef}
+                    src={SaladybotVideo}
+                    muted
+                    playsInline
+                    controls={true} // 필요시 true로
+                />
+            </section>
       {/* 핵심 기술 */}
       <section className="container" id="features">
         <h2>샐러디봇의 핵심 기술</h2>
