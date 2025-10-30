@@ -10,7 +10,7 @@ import FadeInSection from "../../animations/ScrollFadeInSection";
 import HeroSectionImage1 from "../../assets/images/HeroSection1.png";
 import HeroSectionImage2 from "../../assets/images/HeroSection3.png";
 import HeroSectionImage3 from "../../assets/images/HeroSection2.png";
-import HeroSectionVideo1 from "../../assets/video/video.mp4";
+import HeroSectionVideo1 from "../../assets/video/video2.mp4";
 
 const HeroSection: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
