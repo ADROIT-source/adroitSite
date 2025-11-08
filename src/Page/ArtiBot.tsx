@@ -48,10 +48,28 @@ const AritBot: React.FC = () => {
   );
 
   // 새로고침 시 위로 이동
-
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const images = Array.from(document.images);
+  let loadedCount = 0;
+
+  const onImageLoad = () => {
+    loadedCount++;
+    if (loadedCount === images.length) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  images.forEach((img) => {
+    if (img.complete) onImageLoad();
+    else img.addEventListener("load", onImageLoad);
+  });
+
+  return () => {
+    images.forEach((img) => img.removeEventListener("load", onImageLoad));
+  };
+}, []);
+
+
 
   const toggleFAQ = (index: number) => {
     if (openItems.includes(index)) {
