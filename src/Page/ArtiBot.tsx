@@ -102,7 +102,8 @@ const AritBot: React.FC = () => {
             src={AritbotImage1}
             alt="AritBot header"
             style={{
-              transform: `translateY(${translate}px) scale(${scale})`,
+              transform: `translateY(${translate}px) scale(${scale}) translateZ(0)`,
+              willChange: "transform",
               transition: "transform 0.1s linear",
             }}
           />
@@ -165,7 +166,8 @@ const AritBot: React.FC = () => {
                 src={AritbotImage2}
                 alt="content"
                 style={{
-                  transform: `translateY(-${offsetY * 0.05}px)`,
+                  transform: `translateY(-${offsetY * 0.05}px) translateZ(0)`,
+                  willChange: "transform",
                   transition: "transform 0.1s linear",
                 }}
               />
@@ -179,7 +181,10 @@ const AritBot: React.FC = () => {
                 src={AritbotImage3}
                 alt="content"
                 style={{
-                  transform: `scale(0.75) translateY(-${offsetY * 0.1}px)`,
+                  transform: `scale(0.75) translateY(-${
+                    offsetY * 0.1
+                  }px) translateZ(0)`,
+                  willChange: "transform",
                   transition: "transform 0.1s linear",
                 }}
               />
@@ -245,7 +250,7 @@ const AritBot: React.FC = () => {
           <div className="aritbot_aboutus_title">
             <p>About Us</p>
             <h1>
-              Everything You Need<br></br> to Know About  Arti Bot
+              Everything You Need<br></br> to Know About Arti Bot
             </h1>
           </div>
           <div className="faq_section">
