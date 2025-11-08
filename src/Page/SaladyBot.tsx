@@ -112,6 +112,7 @@ const SaladyBot: React.FC = () => {
                     height: 100%;
                 }
                 body {
+                    padding: 90px 0px 0px 0px;
                     margin: 0;
                     background: var(--bg);
                     color: var(--fg);

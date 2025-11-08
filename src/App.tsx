@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 import Lenis from "@studio-freight/lenis";
 import Main from "./Page/main";
 import SaladyBot from "./Page/SaladyBot";
+import AritBot from "./Page/ArtiBot";
+import Store from "./Page/Store";
 import "./App.css";
 
 function AppContent() {
@@ -180,6 +182,8 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/saladybot" element={<SaladyBot />} />
+        <Route path="/aritbot" element={<AritBot />} />
+        <Route path="/store" element={<Store />} />
       </Routes>
     </div>
   );

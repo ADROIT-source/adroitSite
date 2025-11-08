@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
           controls 
           width="100%" 
           height="100%" 
-          playing={isPopupOpen} // Control playback based on popup state
+          playing={isPopupOpen}
         />
       </div>
       <div className="HeroSection_text">

@@ -1,0 +1,756 @@
+.AritBot {
+  width: 100%;
+  max-height: 100vh;
+  background-color: #000000;
+  position: absolute;
+}
+.AritBotSection {
+  width: 100%;
+  height: 100%;
+  margin: 90px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000000;
+}
+.aritbot_header_txt {
+  width: 1200px;
+  margin-top: 80px;
+}
+.aritbot_header_txt h1,
+p {
+  color: white;
+  text-align: center;
+}
+.aritbot_header_txt h1 {
+  font-size: 44px;
+}
+.aritbot_header_txt p {
+  font-size: 25px;
+  margin-top: 35px;
+  font-weight: 300;
+}
+.aritbot_visit_store_button,
+.aritbot_contact_button {
+  position: relative;
+  width: 145px;
+  height: 55px;
+  border-radius: 28px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  transition: all 0.5s ease;
+}
+.aritbot_visit_store_button::before,
+.aritbot_contact_button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  pointer-events: none;
+  border-radius: 28px;
+  display: none;
+}
+.aritbot_visit_store_button span + svg,
+.aritbot_contact_button span + svg {
+  margin-left: 8px; /* 기본 간격 */
+  transition: transform 0.3s ease; /* 부드럽게 이동 */
+}
+.aritbot_visit_store_button:hover span + svg,
+.aritbot_contact_button:hover span + svg {
+  transform: translateX(6px); /* 오른쪽으로 6px 이동 */
+}
+
+.aritbot_visit_store_button:hover,
+.aritbot_contact_button:hover {
+  background-color: #1e5ef3;
+}
+.aritbot_visit_store_button:hover::before,
+.aritbot_contact_button:hover::before {
+  display: flex;
+}
+.aritbot_visit_store_button span,
+.aritbot_contact_button span{
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+.aritbot_header_img {
+  max-height: 700px;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  margin-top: 50px;
+  overflow: hidden;
+  padding: 60px;
+}
+.aritbot_header_img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+.aritbot_company {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #101117;
+  height: 700px;
+  flex-direction: column;
+  padding: 96px 0px;
+}
+.aritbot_company h1 {
+  max-width: 1200px;
+  color: white;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 36px;
+  white-space: normal;
+}
+.aritbot_company_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4열 */
+  grid-template-rows: repeat(2, auto); /* 2행 */
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  /* margin: 50px auto 0; */
+}
+
+.aritbot_company_grid img {
+  width: 200px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  padding: 5px;
+  transition: transform 0.2s ease;
+}
+.aritbot_company p {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.aritbot_content_wrap,
+.aritbot_contact_wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #05060b;
+  align-items: center;
+}
+.aritbot_content {
+  width: 1200px;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0px;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.aritbot_contact {
+  width: 1200px;
+  height: 800px;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0px 120px 0px;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.aritbot_content_title,
+.aritbot_contact_title {
+  width: fit-content;
+  display: flex;
+  margin-bottom: 18px;
+}
+.aritbot_content_title p,
+.aritbot_contact_title p {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #c6d2ff;
+}
+.aritbot_content h1 {
+  color: white;
+}
+.aritbot_content_img {
+  width: 600px;
+  height: 640px;
+  overflow: hidden;
+  position: relative;
+}
+.aritbot_contact_img2 {
+  width: 600px;
+  height: 640px;
+  overflow: hidden;
+  position: relative;
+}
+
+.aritbot_content_img img {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+.aritbot_contact_img2 img {
+  width: 100%;
+  height: 800px;
+  object-fit: contain;
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+.aritbot_content_text h1,
+.aritbot_contact_text h1 {
+  font-size: 36px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: white;
+}
+.aritbot_content_sub,
+.aritbot_conntact_sub {
+  text-align: start;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 30px;
+  margin-top: 25px;
+}
+
+.aritbot_img_card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 */
+  grid-template-rows: repeat(2, auto); /* 2행 */
+  gap: 18px;
+  width: 1200px;
+  height: 1180px;
+  margin: 0 auto;
+  padding: 80px 0px;
+  background-color: #05060b;
+}
+
+.aritbot_img_card li {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.aritbot_img_card li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aritbot_aboutus {
+  width: 1200px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 80px 0px 160px 0px;
+  height: fit-content;
+}
+.aritbot_aboutus_title {
+  height: 640px;
+}
+.aritbot_aboutus_title h1 {
+  color: white;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 55px;
+}
+.aritbot_aboutus_title p {
+  font-size: 18px;
+  font-family: 400;
+  text-align: start;
+  margin-bottom: 45px;
+}
+.faq_section {
+  width: 650px;
+  color: #fff;
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.faq_item {
+  margin-bottom: 25px;
+}
+
+.faq_question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 0;
+  transition: color 0.2s ease;
+}
+.faq_question h3 {
+  font-size: 24px;
+  font-weight: 500;
+}
+.faq_icon {
+  transition: transform 0.3s ease;
+}
+.faq_icon.normal {
+  transform: rotate(0deg);
+}
+.faq_icon.rotated {
+  transform: rotate(-180deg);
+}
+
+.faq_answer {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.25s ease-in-out, opacity 0.2s ease-in-out,
+    padding 0.2s ease-in-out;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #d1d1d1;
+  padding-bottom: 0;
+}
+
+.faq_answer p {
+  font-weight: 300;
+  text-align: start;
+}
+
+.faq_answer.open {
+  max-height: 400px;
+  opacity: 1;
+  padding-bottom: 15px;
+  transition: max-height 0.4s ease-out, opacity 0.3s ease-out,
+    padding 0.3s ease-out;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #2a2a2a;
+  margin: 10px 0;
+}
+.artibot_banner_wrap {
+  width: 100%;
+  background-color: rgb(197, 224, 242);
+  display: flex;
+  justify-content: center;
+}
+.artibot_banner {
+  width: 1200px;
+  padding: 60px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.artibot_banner_text p {
+  color: black;
+  text-align: start;
+  font-size: 20px;
+  line-height: 35px;
+}
+.artibot_banner_title h1 {
+  font-size: 46px;
+  font-weight: 500;
+}
+.artibot_banner_title a button {
+  height: 70px;
+  width: 212px;
+  border-radius: 50px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #05060b;
+  justify-content: space-around;
+  border: none;
+  transition: all 0.5s ease;
+}
+
+.artibot_banner_title a button:hover {
+  background-color: #1e5ef3;
+}
+
+.artibot_banner_title a button p {
+  color: white;
+  display: flex;
+  font-size: 21px;
+}
+.banner_visit_store_icon {
+  background-color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.artibot_footer {
+  height: 100vh;
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 0px;
+}
+.artibot_footer_header {
+  width: 100%;
+  height: 50px;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.artibot_footer_logo {
+  width: 160px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 5px;
+}
+.artibot_footer_header p {
+  margin: 0px 10px;
+  width: fit-content;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0px 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.artibot_footer_logo > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.artibot_footer_img {
+  height: calc(100% - 100px);
+  width: 100%;
+  /* border: 1px solid white; */
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.artibot_footer_img img {
+  width: 750px;
+  height: 420px;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.artibot_footer_menu_wrap {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.artibot_footer_menu {
+  display: flex;
+}
+.artibot_footer_menu li a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.artibot_footer_menu li a:hover {
+  border-bottom: 1px solid white;
+  color: #ffffff;
+}
+
+.artibot_footer_menu li:nth-child(2) {
+  margin: 0px 10px;
+}
+/* .aritbot_header_txt h1 br, .aritbot_company h1 br{
+    display: none;
+} */
+
+@media (max-width: 1440px) {
+  .aritbot_header_img {
+    width: 800px;
+    padding: 0;
+  }
+  .aritbot_header_txt h1 {
+    font-size: 32px;
+  }
+  .aritbot_content_wrap, .aritbot_contact_wrap {
+    height: fit-content;
+    padding: 50px 20px;
+  }
+  .aritbot_content, .aritbot_contact {
+    flex-direction: column-reverse;
+    height: fit-content;
+  }
+   .aritbot_contact {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .aritbot_content_img {
+    margin-bottom: 50px;
+  }
+  .aritbot_contact_img2 {
+      width: 600px;
+        height: 550px;
+  }
+  .aritbot_content_text h1,
+  .aritbot_contact_text h1 {
+    letter-spacing: 1px;
+    font-size: 26px;
+  }
+  .aritbot_content_text h1 br,
+  .aritbot_contact_text h1 br {
+    display: none;
+  }
+  .aritbot_img_card {
+    padding: 50px 20px;
+     width: 100%;
+      height: clamp(310px, 70vh, 800px);
+  }
+  .aritbot_aboutus{
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 160px 20px;
+    height: fit-content;
+    width: 100%;
+  }
+  .aritbot_aboutus_title {
+    height: fit-content;
+    width: 650px;
+    margin-bottom: 30px;
+  }
+  /* .aritbot_aboutus_title h1 br{
+    display: none;
+  } */
+   .artibot_banner_wrap {
+    padding: 0px 20px;
+   }
+   .artibot_footer{
+    padding:80px 20px;
+    width: 100%;
+   }
+   .artibot_footer_menu_wrap {
+    width: 100%;
+    padding: 0px 10px;
+   }
+   .aritbot_header_txt {
+    width: fit-content;
+   }
+}
+@media (max-width: 1100px) {
+    .artibot_banner {
+        height: fit-content;
+        flex-direction: column;
+        align-items: start;
+    }
+    .artibot_banner_text{
+        margin-top: 50px;
+    }
+
+
+}
+@media (max-width: 1200px) {
+  .aritbot_company h1 {
+    font-size: 24px;
+  }
+  .aritbot_company {
+    padding: 0px 50px;
+  }
+  @media (max-width: 1000px) {
+    .aritbot_company_grid {
+      grid-template-columns: repeat(3, 1fr); /* 4열 */
+      grid-template-rows: repeat(3, auto); /* 2행 */
+    }
+    .aritbot_company {
+      height: fit-content;
+      padding: 50px;
+    }
+    .aritbot_company_grid {
+      margin: 55px 0px;
+    }
+  }
+}
+@media (max-width: 650px) {
+    .aritbot_content_text h1,
+.aritbot_contact_text h1 {
+        font-size: 18px;
+    }
+    .aritbot_content_sub,
+.aritbot_conntact_sub {
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+  .aritbot_aboutus_title h1 {
+    font-size: 28px;
+  }
+  .faq_question h3 {
+  font-size: 21px;
+  }
+}
+@media (max-width: 600px) {
+  .aritbot_company p {
+    font-size: 21px;
+  }
+  .artibot_banner_title h1{
+    font-size: 32px;
+  }
+  .artibot_banner_text p br{
+    display: none;
+  }
+  .artibot_banner_title button {
+      height: 60px;
+  width: 180px;
+  }
+  .artibot_banner_title button p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .aritbot_header_txt h1 {
+    font-size: 24px;
+  }
+  .aritbot_header_img {
+    width: 320px;
+    padding: 0;
+  }
+  .aritbot_header_txt p {
+    font-size: 16px;
+  }
+  .artibot_footer_img {
+    height: 100%;
+  }
+.artibot_footer_img img{
+        width: 100%;
+        height: 80%;
+}
+}
+@media (max-width: 730px) {
+  .aritbot_company_grid {
+    grid-template-columns: repeat(2, 1fr); /* 4열 */
+    grid-template-rows: repeat(4, auto); /* 2행 */
+  }
+  .aritbot_company_grid img {
+    width: 180px;
+    height: 50px;
+  }
+    .aritbot_img_card {
+    padding: 50px 20px;
+     width: 100%;
+      height: clamp(310px, 50vh, 800px);
+  }
+    .aritbot_aboutus_title,.faq_section {
+    width: 100%;
+  }
+    .aritbot_aboutus{
+
+    align-items: start;
+    }
+}
+@media (max-width: 520px) {
+  .aritbot_header_txt h1 br {
+    display: flex;
+  }
+  .aritbot_header_txt h1 {
+    font-size: 21px;
+  }
+  .aritbot_visit_store_button,
+  .aritbot_contact_button {
+    width: 120px;
+    height: 45px;
+  }
+  .aritbot_visit_store_button span,
+  .aritbot_contact_button {
+    font-size: 13px;
+  }
+  .aritbot_company h1 {
+    font-size: 20px;
+  }
+  .aritbot_company_grid img {
+    width: 150px;
+    height: 40px;
+  }
+  .aritbot_company {
+    padding: 55px 20px;
+  }
+  .aritbot_content_img{
+    width: 310px;
+    margin: 0;
+  }
+  .aritbot_content_img img {
+    height: 600px;
+  }
+  .aritbot_img_card {
+      grid-template-columns: repeat(2, 1fr); /* 3열 */
+  grid-template-rows: repeat(3, auto); /* 2행 */
+   height: clamp(310px, 70vh, 800px);
+  }
+  .artibot_footer_menu_wrap p{
+    display: none;
+  }
+  .artibot_footer{
+    padding: 80px 10px;
+  }
+}
+@media (max-width: 480px) {
+  .aritbot_company p {
+    font-size: 18px;
+  }
+  .aritbot_company {
+    padding: 55px 10px;
+  }
+  .aritbot_company h1 {
+    font-size: 18px;
+  }
+      .aritbot_content_sub br,
+.aritbot_conntact_sub br{
+    display: none;
+}
+  .aritbot_company {
+    padding: 55px 10px;
+  }
+  .aritbot_aboutus_title h1 br{
+    display: none;
+  }
+  .aritbot_aboutus_title h1{
+    line-height: 40px;
+  }
+   .aritbot_aboutus{
+
+    padding: 80px 10px 160px 10px;
+   }
+   .artibot_banner_title h1{
+    font-size: 24px;
+   }
+   .artibot_banner_text p{
+        font-size: 14px;
+        letter-spacing: 1px;
+        line-height: 25px;
+   }
+}

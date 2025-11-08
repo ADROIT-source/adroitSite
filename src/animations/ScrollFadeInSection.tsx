@@ -3,8 +3,9 @@ import React, { useEffect, useRef, useState } from "react";
 type FadeInSectionProps = {
   children: React.ReactNode;
   className?: string;
-  direction?: "up" | "down" | "left" | "right"; // 슬라이드 방향
-  duration?: number; // 애니메이션 시간(ms)
+  direction?: "up" | "down" | "left" | "right";
+  duration?: number;
+  animation?: "fade" | "slide" | "blur" | "scale" | "blur-seq"; // ✅ 추가됨
 };
 
 const FadeInSection: React.FC<FadeInSectionProps> = ({
@@ -12,6 +13,7 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({
   className = "",
   direction = "up",
   duration = 600,
+  animation = "slide",
 }) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -22,20 +24,21 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({
         const [entry] = entries;
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(entry.target); // 한 번만 실행
+          observer.unobserve(entry.target);
         }
       },
       { threshold: 0.2 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 
-  // 방향별 초기 위치
+  // ✅ 방향 이동 설정
   const translateMap: Record<string, string> = {
     up: "translateY(20px)",
     down: "translateY(-20px)",
@@ -43,13 +46,60 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({
     right: "translateX(-20px)",
   };
 
+  let initialStyle: React.CSSProperties = { opacity: 0 };
+  let finalStyle: React.CSSProperties = {
+    opacity: 1,
+    transform: "translate(0,0)",
+    filter: "blur(0px)",
+  };
+
+  switch (animation) {
+    case "fade":
+      initialStyle.opacity = 0;
+      finalStyle.opacity = 1;
+      break;
+
+    case "slide":
+      initialStyle.transform = translateMap[direction];
+      break;
+
+    case "blur":
+      initialStyle.filter = "blur(10px)";
+      break;
+
+    case "scale":
+      initialStyle.transform = "scale(0.95)";
+      finalStyle.transform = "scale(1)";
+      break;
+  }
+
+  // ✅ 새로운 blur-seq (문장별 순차 등장)
+  if (animation === "blur-seq") {
+    return (
+      <div ref={ref} className={`${className}`}>
+        {React.Children.map(children, (child, i) => (
+          <div
+            style={{
+              opacity: isVisible ? 1 : 0,
+              transform: isVisible ? "translateY(0)" : "translateY(10px)",
+              filter: isVisible ? "blur(0px)" : "blur(10px)",
+              transition: `all ${duration}ms ease-out`,
+              transitionDelay: `${i * 150}ms`, // ✅ 순차 딜레이
+            }}
+          >
+            {child}
+          </div>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div
       ref={ref}
       className={className}
       style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translate(0,0)" : translateMap[direction],
+        ...(!isVisible ? initialStyle : finalStyle),
         transition: `all ${duration}ms ease-out`,
       }}
     >

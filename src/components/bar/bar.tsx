@@ -9,6 +9,7 @@ const allSections = [
   "company",
   "about",
   "product2",
+  "recyclonplat",
   "project",
   "question",
   "history",
@@ -31,6 +32,15 @@ const Bar: React.FC = () => {
       // saladybot 페이지라면 activeSection을 saladybot으로 고정
       if (location.pathname === "/saladybot") {
         setActiveSection("saladybot");
+        return;
+      }
+
+      if (location.pathname === "/aritbot") {
+        setActiveSection("aritbot");
+        return;
+      }
+       if (location.pathname === "/store") {
+        setActiveSection("store");
         return;
       }
 
@@ -99,7 +109,7 @@ const Bar: React.FC = () => {
             className={activeSection === "hero" ? "active" : ""}
             onClick={() => scrollToSection("hero")}
           >
-            Home
+            Adroit
           </li>
           <li
             className={activeSection === "about" ? "active" : ""}
@@ -134,11 +144,20 @@ const Bar: React.FC = () => {
           >
             Salady Bot
           </li>
+          <li
+            className={activeSection === "aritbot" ? "active" : ""}
+            onClick={() => {
+              navigate("/aritbot");
+              setMenuOpen(false);
+            }}
+          >
+            Arti Bot
+          </li>
         </ul>
 
         {/* 토글 메뉴 */}
         <ul className={`toggle_bar_menu ${menuOpen ? "open" : ""}`}>
-          <li onClick={() => scrollToSection("hero")}>Home</li>
+          <li onClick={() => scrollToSection("hero")}>Adroit</li>
           <li onClick={() => scrollToSection("about")}>About</li>
           <li onClick={() => scrollToSection("product2")}>Product</li>
           <li onClick={() => scrollToSection("history")}>History</li>
@@ -155,6 +174,19 @@ const Bar: React.FC = () => {
             }}
           >
             Salady Bot
+          </li>
+          <li
+            className={activeSection === "aritbot" ? "active" : ""}
+            onClick={() => {
+              navigate("/aritbot");
+              setMenuOpen(false);
+              setTimeout(() => {
+                const element = document.getElementById("top");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }, 100); // 렌더링 후 스크롤
+            }}
+          >
+            Arti Bot
           </li>
 
           <button

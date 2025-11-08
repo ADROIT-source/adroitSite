@@ -1,0 +1,56 @@
+.store {
+  width: 100%;
+  height: 100vh;
+  background-color: #0e0e0e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.store_content {
+  text-align: center;
+  margin-top: 120px; /* Bar 높이 보정 */
+}
+
+.store_content h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.store_content p {
+  color: #aaa;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  margin-bottom: 10px;
+}
+.store_back a{
+    color: rgb(190, 190, 190);
+    transition: color 0.3s ease;
+
+}
+.store_back a:hover{
+    color: #1e5ef3;
+}
+.store_back{
+    margin-bottom: 30px;
+}
+
+.store_spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid #1e5ef3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
