@@ -417,7 +417,7 @@ hr {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 0px;
+  padding: 80px 0px 180px 0px;
 }
 .artibot_footer_header {
   width: 100%;
