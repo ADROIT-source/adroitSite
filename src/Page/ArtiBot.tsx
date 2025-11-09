@@ -26,6 +26,22 @@ import AritBotImgCard4 from "../assets/images/aritbot_card4.avif";
 import AritBotImgCard5 from "../assets/images/aritbot_card5.avif";
 import AritBotImgCard6 from "../assets/images/aritbot_card6.avif";
 
+import HyndalRotemGrayLogo from "../assets/logo/hyundai_rotem_gray.png";
+import EunpyeongLogo from "../assets/logo/eunpyeong.png";
+import HankookGrayLogo from "../assets/logo/hankook_gray.png";
+import HyndalMobisGrayLogo from "../assets/logo/hyundal_mobis_gray.png";
+import HyundalWiaGrayLogo from "../assets/logo/hyundal_wia_gray.png";
+import HyundalGrayLogo from "../assets/logo/hyundal_gray.png";
+import KnGrayLogo from "../assets/logo/kn_gray.png";
+import LotteGrayLogo from "../assets/logo/lotte_gray.png";
+import NamyangNexmoGrayLogo from "../assets/logo/namyang_nexmo_gray.png";
+import NongshimGrayLogo from "../assets/logo/nongshim_gray.png";
+import NvhkoreaGrayLogo from "../assets/logo/nvhkorea_gray.png";
+import SamsungGrayLogo from "../assets/logo/samsung_logo_gray.png";
+import SkhynixGrayLogo from "../assets/logo/skhynix_gray.png";
+import YangjuLogo from "../assets/logo/yangju.png";
+
+
 import AdroitLogo from "../assets/images/logo1.png";
 const faqData = [
   {
@@ -48,28 +64,10 @@ const AritBot: React.FC = () => {
   );
 
   // 새로고침 시 위로 이동
+
   useEffect(() => {
-  const images = Array.from(document.images);
-  let loadedCount = 0;
-
-  const onImageLoad = () => {
-    loadedCount++;
-    if (loadedCount === images.length) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
-  images.forEach((img) => {
-    if (img.complete) onImageLoad();
-    else img.addEventListener("load", onImageLoad);
-  });
-
-  return () => {
-    images.forEach((img) => img.removeEventListener("load", onImageLoad));
-  };
-}, []);
-
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const toggleFAQ = (index: number) => {
     if (openItems.includes(index)) {
@@ -133,21 +131,24 @@ const AritBot: React.FC = () => {
           animation="blur-seq"
         >
           <h1>
-            Today, we support teams from F500 corporations to small startups.
-            Arti speeds up any hardware team, augmenting them with our hardware
-            and supply chain expertise
+            Before: Today, we support teams from F500 corporations to small startups.  Arti speeds up any hardware team, augmenting them with our hardware and supply chain expertise<br></br>
+            After: Today, we support teams from large corporation to small startups.  Arti speeds up any hardware team, augmenting them with our hardware and supply chain expertise
           </h1>
           <div className="aritbot_company_grid">
-            <img src={Nvidia} alt="Nvidia" />
-            <img src={Cobot} alt="Cobot" />
-            <img src={Ultra} alt="Ultra" />
-            <img src={GeorgiaTech} alt="Georgia Tech" />
-            <img src={PathRobotics} alt="Path Robotics" />
-            <img src={ZeonSystems} alt="Zeon Systems" />
-            <img src={Google} alt="Google" />
-            <img src={BoostRobotics} alt="Boost Robotics" />
+            <img src={HyndalRotemGrayLogo} alt="Nvidia" />
+            <img src={SamsungGrayLogo} alt="Cobot" />
+            <img src={HankookGrayLogo} alt="Ultra" />
+            <img src={HyndalMobisGrayLogo} alt="Georgia Tech" />
+            <img src={SkhynixGrayLogo} alt="Path Robotics" />
+            <img src={NvhkoreaGrayLogo} alt="Zeon Systems" />
+            <img src={KnGrayLogo} alt="Google" />
+            <img src={LotteGrayLogo} alt="Boost Robotics" />
+            <img src={NongshimGrayLogo} alt="Boost Robotics" />
+            <img src={NamyangNexmoGrayLogo} alt="Boost Robotics" />
+            <img src={HyundalWiaGrayLogo} alt="Boost Robotics" />
+            <img src={HyundalGrayLogo} alt="Boost Robotics" />
           </div>
-          <p>and many more across Europe and Asia …</p>
+          <p>and many more across …</p>
         </FadeInSection>
         <div className="aritbot_content_wrap">
           <div className="aritbot_content">

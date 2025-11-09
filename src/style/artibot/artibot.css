@@ -1,13 +1,13 @@
 .AritBot {
   width: 100%;
-  max-height: 100vh;
+  min-height: 100vh;
   background-color: #000000;
   position: absolute;
 }
 .AritBotSection {
   width: 100%;
   height: 100%;
-  margin: 90px auto;
+  /* margin: 90px 0px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,7 +15,7 @@
 }
 .aritbot_header_txt {
   width: 1200px;
-  margin-top: 80px;
+  margin-top: 180px;
 }
 .aritbot_header_txt h1,
 p {
@@ -107,7 +107,7 @@ p {
   align-items: center;
   justify-content: space-around;
   background-color: #101117;
-  height: 700px;
+  height: 900px;
   flex-direction: column;
   padding: 96px 0px;
 }
@@ -116,8 +116,8 @@ p {
   color: white;
   letter-spacing: 2px;
   text-align: center;
-  font-weight: 500;
-  font-size: 36px;
+  font-weight: 400;
+  font-size: 32px;
   white-space: normal;
 }
 .aritbot_company_grid {
@@ -139,6 +139,9 @@ p {
   border-radius: 8px;
   padding: 5px;
   transition: transform 0.2s ease;
+    filter: grayscale(100%) brightness(1.6); /* 흑백 + 밝게 */
+  opacity: 0.9; /* 살짝 투명감 주기 (선택사항) */
+  transition: filter 0.3s ease;
 }
 .aritbot_company p {
   font-size: 24px;
@@ -244,7 +247,7 @@ p {
   height: 1180px;
   margin: 0 auto;
   padding: 80px 0px;
-  background-color: #05060b;
+  background-color: #000000;
 }
 
 .aritbot_img_card li {
@@ -495,7 +498,7 @@ hr {
 
 @media (max-width: 1440px) {
   .aritbot_header_img {
-    width: 800px;
+    width: 790px;
     padding: 0;
   }
   .aritbot_header_txt h1 {
@@ -752,5 +755,8 @@ hr {
         font-size: 14px;
         letter-spacing: 1px;
         line-height: 25px;
+   }
+   .aritbot_company h1{
+      font-size: 16px;
    }
 }
