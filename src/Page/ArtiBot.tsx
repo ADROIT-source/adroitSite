@@ -131,8 +131,7 @@ const AritBot: React.FC = () => {
           animation="blur-seq"
         >
           <h1>
-            Before: Today, we support teams from F500 corporations to small startups.  Arti speeds up any hardware team, augmenting them with our hardware and supply chain expertise<br></br>
-            After: Today, we support teams from large corporation to small startups.  Arti speeds up any hardware team, augmenting them with our hardware and supply chain expertise
+            Today, we support teams from large corporation to small startups.  Arti speeds up any hardware team, augmenting them with our hardware and supply chain expertise
           </h1>
           <div className="aritbot_company_grid">
             <img src={HyndalRotemGrayLogo} alt="Nvidia" />
@@ -173,7 +172,7 @@ const AritBot: React.FC = () => {
               <p className="aritbot_content_sub">
                 Get started today with our <span>$5000</span> OpenArm kit.
               </p>
-              <a href="#">
+              <a href="https://github.com/ADROIT-source" target="_blank">
                 <button className="aritbot_visit_store_button">
                   <span>Go Github</span>
                   <ChevronRight size={22} color="black" strokeWidth={1} />

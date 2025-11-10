@@ -107,7 +107,7 @@ p {
   align-items: center;
   justify-content: space-around;
   background-color: #101117;
-  height: 900px;
+  height: 700px;
   flex-direction: column;
   padding: 96px 0px;
 }
@@ -581,7 +581,7 @@ hr {
 }
 @media (max-width: 1200px) {
   .aritbot_company h1 {
-    font-size: 24px;
+    font-size: 28px;
   }
   .aritbot_company {
     padding: 0px 50px;

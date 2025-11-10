@@ -11,7 +11,7 @@ const Store: React.FC = () => {
         <h1>준비 중입니다</h1>
         <p>12월 초 오픈 예정입니다. 감사합니다.</p>
         <div className="store_back">
-            <a href="/aritbot" >돌아가기</a>
+            <a href="/artibot" >돌아가기</a>
         </div>
         
         <div className="store_spinner"></div>
