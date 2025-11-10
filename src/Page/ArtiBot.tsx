@@ -328,7 +328,8 @@ const AritBot: React.FC = () => {
         <div className="artibot_footer">
           <div className="artibot_footer_header">
             <div className="artibot_footer_logo">
-              <img src={AdroitLogo} alt="" />
+              {/* <img src={AdroitLogo} alt="" /> */}
+              <h3>ARTI</h3>
             </div>
             <p>Fast Custom Robotics</p>
           </div>
@@ -336,13 +337,13 @@ const AritBot: React.FC = () => {
             <img src={AritbotImage5} alt="" />
           </div>
           <div className="artibot_footer_menu_wrap">
-            <p>© 2025. All rights reserved. Adroit</p>
+            <p>© 2019. All rights reserved. Adroit</p>
             <ul className="artibot_footer_menu">
               <li>
                 <a href="/store">Store</a>
               </li>
               <li>
-                <a href="">Github</a>
+                <a href="https://github.com/ADROIT-source" target="_blank">Github</a>
               </li>
               <li>
                 <a href="mailto:hs.lee@adroit.co.kr">contact</a>

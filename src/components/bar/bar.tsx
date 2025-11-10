@@ -35,7 +35,7 @@ const Bar: React.FC = () => {
         return;
       }
 
-      if (location.pathname === "/aritbot") {
+      if (location.pathname === "/artibot") {
         setActiveSection("aritbot");
         return;
       }

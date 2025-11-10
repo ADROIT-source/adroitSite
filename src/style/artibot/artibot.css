@@ -431,12 +431,18 @@ hr {
   align-items: center;
 }
 .artibot_footer_logo {
-  width: 160px;
+  width: 140px;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   padding: 5px;
+
+}
+.artibot_footer_logo h3{
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
 }
 .artibot_footer_header p {
   margin: 0px 10px;
@@ -448,11 +454,11 @@ hr {
   align-items: center;
   justify-content: center;
 }
-.artibot_footer_logo > img {
+/* .artibot_footer_logo > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
+} */
 .artibot_footer_img {
   height: calc(100% - 100px);
   width: 100%;

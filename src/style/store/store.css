@@ -12,6 +12,9 @@
 
 .store_content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 120px; /* Bar 높이 보정 */
 }
 
@@ -28,15 +31,26 @@
   margin-bottom: 10px;
 }
 .store_back a{
-    color: rgb(190, 190, 190);
+    color: rgb(255, 255, 255);
     transition: color 0.3s ease;
 
 }
-.store_back a:hover{
-    color: #1e5ef3;
+.store_back:hover{
+    border:1px solid #1e5ef3;
+    background-color: #1e5ef3;
+    color: white;
+
 }
 .store_back{
-    margin-bottom: 30px;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    margin: 20px 0px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
 }
 
 .store_spinner {
