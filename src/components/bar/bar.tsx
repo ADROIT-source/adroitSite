@@ -147,7 +147,7 @@ const Bar: React.FC = () => {
           <li
             className={activeSection === "aritbot" ? "active" : ""}
             onClick={() => {
-              navigate("/aritbot");
+              navigate("/artibot");
               setMenuOpen(false);
             }}
           >
@@ -178,7 +178,7 @@ const Bar: React.FC = () => {
           <li
             className={activeSection === "aritbot" ? "active" : ""}
             onClick={() => {
-              navigate("/aritbot");
+              navigate("/artibot");
               setMenuOpen(false);
               setTimeout(() => {
                 const element = document.getElementById("top");
