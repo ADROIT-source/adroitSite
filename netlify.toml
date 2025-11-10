@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/*"
+  to = "/artibot/:splat"
+  status = 200
+  force = true
+  conditions = { Host = ["arti.ai.kr"] }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
