@@ -18,7 +18,14 @@ const allSections = [
   "saladybot",
   "store",
 ];
-const menuSections = ["hero", "about", "product2", "history", "saladybot","artibot"];
+const menuSections = [
+  "hero",
+  "about",
+  "product2",
+  "history",
+  "saladybot",
+  "artibot",
+];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -42,7 +49,7 @@ const Bar: React.FC = () => {
         setActiveSection("aritbot");
         return;
       }
-       if (location.pathname === "/store") {
+      if (location.pathname === "/store") {
         setActiveSection("store");
         return;
       }
