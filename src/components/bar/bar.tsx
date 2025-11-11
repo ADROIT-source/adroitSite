@@ -14,8 +14,11 @@ const allSections = [
   "question",
   "history",
   "contact",
+  "artibot",
+  "saladybot",
+  "store",
 ];
-const menuSections = ["hero", "about", "product2", "history"];
+const menuSections = ["hero", "about", "product2", "history", "saladybot","artibot"];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
