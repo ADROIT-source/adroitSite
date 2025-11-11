@@ -14,18 +14,12 @@ const allSections = [
   "question",
   "history",
   "contact",
-  "artibot",
+  "aritbot",    // Arti Bot
   "saladybot",
   "store",
 ];
-const menuSections = [
-  "hero",
-  "about",
-  "product2",
-  "history",
-  "saladybot",
-  "artibot",
-];
+
+const menuSections = ["hero", "about", "product2", "history", "saladybot","aritbot", ];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -39,12 +33,11 @@ const Bar: React.FC = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 0);
 
-      // saladybot 페이지라면 activeSection을 saladybot으로 고정
+      // URL 기반 페이지 우선 처리
       if (location.pathname === "/saladybot") {
         setActiveSection("saladybot");
         return;
       }
-
       if (location.pathname === "/artibot") {
         setActiveSection("aritbot");
         return;
@@ -54,13 +47,8 @@ const Bar: React.FC = () => {
         return;
       }
 
-      // 새로고침 직후 맨 위에 있으면 hero 고정
-      if (window.scrollY === 0) {
-        setActiveSection("hero");
-        return;
-      }
-
-      let current = "hero";
+      // 영역 기반 활성화
+      let current = allSections[0]; // 기본값: 첫 섹션
       for (let i = 0; i < allSections.length; i++) {
         const id = allSections[i];
         const section = document.getElementById(id);
@@ -73,6 +61,7 @@ const Bar: React.FC = () => {
         }
       }
 
+      // 메뉴에 없는 섹션이면 가장 가까운 메뉴 섹션으로 조정
       if (!menuSections.includes(current)) {
         for (let i = allSections.indexOf(current); i >= 0; i--) {
           if (menuSections.includes(allSections[i])) {
@@ -81,20 +70,19 @@ const Bar: React.FC = () => {
           }
         }
       }
+
       setActiveSection(current);
     };
 
-    // 실행 즉시 초기화
+    // 초기 실행
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
-  // 특정 섹션으로 이동
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
-      // 메인 페이지로 이동하면서 target 섹션을 state로 전달
       navigate("/", { state: { target: sectionId } });
       setMenuOpen(false);
       return;
@@ -139,12 +127,6 @@ const Bar: React.FC = () => {
           >
             History
           </li>
-          {/* <li
-            className={activeSection === "contact" ? "active" : ""}
-            onClick={() => scrollToSection("contact")}
-          >
-            Contact
-          </li> */}
           <li
             className={activeSection === "saladybot" ? "active" : ""}
             onClick={() => {
@@ -159,6 +141,10 @@ const Bar: React.FC = () => {
             onClick={() => {
               navigate("/artibot");
               setMenuOpen(false);
+              setTimeout(() => {
+                const element = document.getElementById("aritbot");
+                if (element) element.scrollIntoView({ behavior: "smooth" });
+              }, 100);
             }}
           >
             Arti Bot
@@ -178,9 +164,9 @@ const Bar: React.FC = () => {
               navigate("/saladybot");
               setMenuOpen(false);
               setTimeout(() => {
-                const element = document.getElementById("top"); // SaladyBot 페이지 최상단 id
+                const element = document.getElementById("top");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100); // 렌더링 후 스크롤
+              }, 100);
             }}
           >
             Salady Bot
@@ -191,9 +177,9 @@ const Bar: React.FC = () => {
               navigate("/artibot");
               setMenuOpen(false);
               setTimeout(() => {
-                const element = document.getElementById("top");
+                const element = document.getElementById("aritbot");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100); // 렌더링 후 스크롤
+              }, 100);
             }}
           >
             Arti Bot
