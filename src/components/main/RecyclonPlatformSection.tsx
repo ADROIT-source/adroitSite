@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import "../../style/main/recyclonplatform.css";
 import FadeInSection from "../../animations/ScrollFadeInSection";
 
-import SaladybotVideo from "../../assets/video/recyclon_platform.mp4";
+import SaladybotVideo from "../../assets/video/recyclon_platform2.mp4";
 import { Recycle } from "lucide-react";
 
 const SaladyBotVideo: React.FC = () => {
