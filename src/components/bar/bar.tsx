@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../../style/bar/bar.css";
 import { MoveRight, AlignJustify, AlignLeft } from "lucide-react";
@@ -14,12 +14,13 @@ const allSections = [
   "question",
   "history",
   "contact",
-  "aritbot",    // Arti Bot
+  "aritbot",
   "saladybot",
   "store",
+  "lerobot",
 ];
 
-const menuSections = ["hero", "about", "product2", "history", "saladybot","aritbot", ];
+const menuSections = ["hero", "about", "product2", "history", "saladybot", "aritbot", "lerobot"];
 
 const Bar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +29,11 @@ const Bar: React.FC = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+  const menuRef = useRef<HTMLUListElement>(null);
+  const toggleButtonRef = useRef<HTMLDivElement>(null);
+
+  // /artibot 또는 /LeRobt 페이지인지 확인
+  const isArtiBotPage = location.pathname === "/artibot" || location.pathname === "/LeRobt";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,9 +52,13 @@ const Bar: React.FC = () => {
         setActiveSection("store");
         return;
       }
+      if (location.pathname === "/LeRobt") {
+        setActiveSection("lerobot");
+        return;
+      }
 
       // 영역 기반 활성화
-      let current = allSections[0]; // 기본값: 첫 섹션
+      let current = allSections[0];
       for (let i = 0; i < allSections.length; i++) {
         const id = allSections[i];
         const section = document.getElementById(id);
@@ -74,12 +84,31 @@ const Bar: React.FC = () => {
       setActiveSection(current);
     };
 
-    // 초기 실행
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
+
+  // 외부 클릭 감지
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuOpen &&
+        menuRef.current &&
+        toggleButtonRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        !toggleButtonRef.current.contains(event.target as Node)
+      ) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
 
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== "/") {
@@ -103,87 +132,186 @@ const Bar: React.FC = () => {
 
       <div className="bar_menu_wrap flex-center">
         <ul className="bar_menu">
-          <li
-            className={activeSection === "hero" ? "active" : ""}
-            onClick={() => scrollToSection("hero")}
-          >
-            Adroit
-          </li>
-          <li
-            className={activeSection === "about" ? "active" : ""}
-            onClick={() => scrollToSection("about")}
-          >
-            About
-          </li>
-          <li
-            className={activeSection === "product2" ? "active" : ""}
-            onClick={() => scrollToSection("product2")}
-          >
-            Product
-          </li>
-          <li
-            className={activeSection === "history" ? "active" : ""}
-            onClick={() => scrollToSection("history")}
-          >
-            History
-          </li>
-          <li
-            className={activeSection === "saladybot" ? "active" : ""}
-            onClick={() => {
-              navigate("/saladybot");
-              setMenuOpen(false);
-            }}
-          >
-            Salady Bot
-          </li>
-          <li
-            className={activeSection === "aritbot" ? "active" : ""}
-            onClick={() => {
-              navigate("/artibot");
-              setMenuOpen(false);
-              setTimeout(() => {
-                const element = document.getElementById("aritbot");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            }}
-          >
-            Arti Bot
-          </li>
+          {/* /artibot 페이지가 아닐 때의 메뉴 */}
+          {!isArtiBotPage && (
+            <>
+              <li
+                className={activeSection === "hero" ? "active" : ""}
+                onClick={() => scrollToSection("hero")}
+              >
+                Adroit
+              </li>
+              <li
+                className={activeSection === "about" ? "active" : ""}
+                onClick={() => scrollToSection("about")}
+              >
+                About
+              </li>
+              <li
+                className={activeSection === "product2" ? "active" : ""}
+                onClick={() => scrollToSection("product2")}
+              >
+                Product
+              </li>
+              <li
+                className={activeSection === "history" ? "active" : ""}
+                onClick={() => scrollToSection("history")}
+              >
+                History
+              </li>
+              <li
+                className={activeSection === "saladybot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/saladybot");
+                  setMenuOpen(false);
+                }}
+              >
+                Salady Bot
+              </li>
+              <li
+                className={activeSection === "aritbot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/artibot");
+                  setMenuOpen(false);
+                  setTimeout(() => {
+                    const element = document.getElementById("aritbot");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                Arti Bot
+              </li>
+            </>
+          )}
+
+          {/* /artibot 페이지일 때의 메뉴 */}
+          {isArtiBotPage && (
+            <>
+              <li
+                className={activeSection === "hero" ? "active" : ""}
+                onClick={() => {
+                  navigate("/");
+                  setMenuOpen(false);
+                }}
+              >
+                Adroit
+              </li>
+              <li
+                className={activeSection === "saladybot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/saladybot");
+                  setMenuOpen(false);
+                }}
+              >
+                Salady Bot
+              </li>
+              <li
+                className={activeSection === "aritbot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/artibot");
+                  setMenuOpen(false);
+                  setTimeout(() => {
+                    const element = document.getElementById("aritbot");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                Arti Bot
+              </li>
+              <li
+                className={activeSection === "lerobot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/LeRobt");
+                  setMenuOpen(false);
+                }}
+              >
+                LeRobot
+              </li>
+            </>
+          )}
         </ul>
 
         {/* 토글 메뉴 */}
-        <ul className={`toggle_bar_menu ${menuOpen ? "open" : ""}`}>
-          <li onClick={() => scrollToSection("hero")}>Adroit</li>
-          <li onClick={() => scrollToSection("about")}>About</li>
-          <li onClick={() => scrollToSection("product2")}>Product</li>
-          <li onClick={() => scrollToSection("history")}>History</li>
-          <li onClick={() => scrollToSection("contact")}>Contact</li>
-          <li
-            className={activeSection === "saladybot" ? "active" : ""}
-            onClick={() => {
-              navigate("/saladybot");
-              setMenuOpen(false);
-              setTimeout(() => {
-                const element = document.getElementById("top");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            }}
-          >
-            Salady Bot
-          </li>
-          <li
-            className={activeSection === "aritbot" ? "active" : ""}
-            onClick={() => {
-              navigate("/artibot");
-              setMenuOpen(false);
-              setTimeout(() => {
-                const element = document.getElementById("aritbot");
-                if (element) element.scrollIntoView({ behavior: "smooth" });
-              }, 100);
-            }}
-          >
-            Arti Bot
-          </li>
+        <ul ref={menuRef} className={`toggle_bar_menu ${menuOpen ? "open" : ""}`}>
+          {!isArtiBotPage && (
+            <>
+              <li onClick={() => scrollToSection("hero")}>Adroit</li>
+              <li onClick={() => scrollToSection("about")}>About</li>
+              <li onClick={() => scrollToSection("product2")}>Product</li>
+              <li onClick={() => scrollToSection("history")}>History</li>
+              <li onClick={() => scrollToSection("contact")}>Contact</li>
+              <li
+                className={activeSection === "saladybot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/saladybot");
+                  setMenuOpen(false);
+                  setTimeout(() => {
+                    const element = document.getElementById("top");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                Salady Bot
+              </li>
+              <li
+                className={activeSection === "aritbot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/artibot");
+                  setMenuOpen(false);
+                  setTimeout(() => {
+                    const element = document.getElementById("aritbot");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                Arti Bot
+              </li>
+            </>
+          )}
+
+          {isArtiBotPage && (
+            <>
+              <li
+                onClick={() => {
+                  navigate("/");
+                  setMenuOpen(false);
+                }}
+              >
+                Adroit
+              </li>
+              <li
+                className={activeSection === "saladybot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/saladybot");
+                  setMenuOpen(false);
+                }}
+              >
+                Salady Bot
+              </li>
+              <li
+                className={activeSection === "aritbot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/artibot");
+                  setMenuOpen(false);
+                  setTimeout(() => {
+                    const element = document.getElementById("aritbot");
+                    if (element) element.scrollIntoView({ behavior: "smooth" });
+                  }, 100);
+                }}
+              >
+                Arti Bot
+              </li>
+              <li
+                className={activeSection === "lerobot" ? "active" : ""}
+                onClick={() => {
+                  navigate("/LeRobt");
+                  setMenuOpen(false);
+                }}
+              >
+                LeRobot
+              </li>
+            </>
+          )}
 
           <button
             className="toggle_contact_us_button"
@@ -204,7 +332,7 @@ const Bar: React.FC = () => {
       </button>
 
       {/* 햄버거 버튼 */}
-      <div className="toggle_menu_wrap" onClick={() => setMenuOpen(!menuOpen)}>
+      <div ref={toggleButtonRef} className="toggle_menu_wrap" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? (
           <AlignLeft
             color="white"

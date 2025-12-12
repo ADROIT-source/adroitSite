@@ -116,7 +116,7 @@
   top: 90px;
   width: 100%;
   left: 0;
-  background-color: #181818;
+  background-color:#101010;
   padding: 20px;
   opacity: 0;
   max-height: 0;
@@ -178,9 +178,9 @@
   
 }
 @media (max-width: 1340px) {
-    /* .Bar {
-    height: 60px;
-  } */
+  .Bar {
+    background-color: #101010;
+  }
   .contact_us_button,
   .bar_menu {
     display: none !important;
@@ -194,7 +194,7 @@
   .Bar.shadow {
     box-shadow: none;
     border-bottom: none;
-    background-color: #181818;
+    background-color: #101010;
   }
   .logo {
     min-width: 150px;

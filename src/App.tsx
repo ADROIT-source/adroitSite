@@ -5,6 +5,7 @@ import Main from "./Page/main";
 import SaladyBot from "./Page/SaladyBot";
 import AritBot from "./Page/ArtiBot";
 import Store from "./Page/Store";
+import LeRobot from "./Page/Lerobot";
 import "./App.css";
 
 function AppContent() {
@@ -184,6 +185,7 @@ function AppContent() {
         <Route path="/saladybot" element={<SaladyBot />} />
         <Route path="/artibot" element={<AritBot />} />
         <Route path="/store" element={<Store />} />
+        <Route path="/LeRobt" element={<LeRobot />} />
       </Routes>
     </div>
   );

@@ -90,7 +90,7 @@ const SaladyBot: React.FC = () => {
       {/* CSS 스타일을 <style> 태그로 삽입 */}
       <style>{`
                 :root {
-                    --bg: #181818;
+                    --bg: #070707;
                     --fg: #e9edf3;
                     --muted: #a7b1bf;
                     --brand: #1e5ef3;
