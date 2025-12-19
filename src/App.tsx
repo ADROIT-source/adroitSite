@@ -185,7 +185,7 @@ function AppContent() {
         <Route path="/saladybot" element={<SaladyBot />} />
         <Route path="/artibot" element={<AritBot />} />
         <Route path="/store" element={<Store />} />
-        <Route path="/LeRobt" element={<LeRobot />} />
+        <Route path="/LeRobot" element={<LeRobot />} />
       </Routes>
     </div>
   );
