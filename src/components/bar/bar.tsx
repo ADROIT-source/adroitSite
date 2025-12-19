@@ -32,8 +32,8 @@ const Bar: React.FC = () => {
   const menuRef = useRef<HTMLUListElement>(null);
   const toggleButtonRef = useRef<HTMLDivElement>(null);
 
-  // /artibot 또는 /LeRobt 페이지인지 확인
-  const isArtiBotPage = location.pathname === "/artibot" || location.pathname === "/LeRobt";
+  // /artibot 또는 /LeRobot 페이지인지 확인
+  const isArtiBotPage = location.pathname === "/artibot" || location.pathname === "/LeRobot";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +52,7 @@ const Bar: React.FC = () => {
         setActiveSection("store");
         return;
       }
-      if (location.pathname === "/LeRobt") {
+      if (location.pathname === "/LeRobot") {
         setActiveSection("lerobot");
         return;
       }
@@ -221,7 +221,7 @@ const Bar: React.FC = () => {
               <li
                 className={activeSection === "lerobot" ? "active" : ""}
                 onClick={() => {
-                  navigate("/LeRobt");
+                  navigate("/LeRobot");
                   setMenuOpen(false);
                 }}
               >
@@ -304,7 +304,7 @@ const Bar: React.FC = () => {
               <li
                 className={activeSection === "lerobot" ? "active" : ""}
                 onClick={() => {
-                  navigate("/LeRobt");
+                  navigate("/LeRobot");
                   setMenuOpen(false);
                 }}
               >
